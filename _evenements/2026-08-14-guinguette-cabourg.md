@@ -7,6 +7,7 @@ spectacle: "La Guinguette imaginaire"
 prix: "12 € / 8 € réduit"
 billetterie: "https://www.helloasso.com/"
 complet: false
+photo: ""
 excerpt: "Une guinguette improvisée en plein air, sous les étoiles de Cabourg."
 ---
 

@@ -73,7 +73,13 @@ spectacle: "Ces petits riens"      # rappel du format joué
 prix: "12 € / 8 € réduit"
 billetterie: "https://…"           # URL externe ; vide => bouton « Nous écrire »
 complet: false                      # true => badge « Complet », masque la billetterie
+photo: "/assets/images/evenements/…"  # optionnelle ; vide => pas de photo dans la pop-up
 ```
+
+- **Pop-up de détails** : un clic sur une carte de l'agenda (accueil ou `/agenda/`) ouvre une
+  pop-up avec la photo (si renseignée), la description longue (le corps Markdown du fichier,
+  comme sur la page dédiée `/agenda/:slug/`) et le bouton « Réserver ». Généré dans
+  `_includes/carte-evenement.html`, comportement dans `assets/js/main.js`.
 
 - **À venir vs passé** : calculé en Liquid par comparaison `date >= site.time`. `site.time` est
   figé au **moment du build**. Un événement ne bascule donc en « passé » qu'au prochain déploiement.
@@ -107,6 +113,9 @@ dans `assets/images/presse/`). Triée par date décroissante automatiquement. L'
 ## À brancher / à compléter (placeholders volontaires)
 
 - **Billetterie** : URLs `helloasso.com` factices dans les événements → mettre les vraies.
+- **Photos des événements** : champ `photo:` vide dans tous les fichiers `_evenements/` → déposer
+  une image par événement (ex. dans `assets/images/evenements/`) pour qu'elle apparaisse dans la
+  pop-up de détails.
 - **Formulaires** (contact + newsletter) : `action="#"` → brancher un service sans serveur
   (Formspree, Basin, HelloAsso, Brevo…).
 - **Réseaux** : URLs d'exemple dans `_config.yml > reseaux` (vide = pastille masquée).

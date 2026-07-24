@@ -7,6 +7,7 @@ spectacle: "Le Match d'improvisation"
 prix: "10 € / 6 € réduit"
 billetterie: "https://www.helloasso.com/"
 complet: false
+photo: ""
 excerpt: "Deux équipes s'affrontent sur la scène rouennaise : à vous de voter."
 ---
 

@@ -7,6 +7,7 @@ spectacle: "La Guinguette imaginaire"
 prix: "12 €"
 billetterie: ""
 complet: false
+photo: ""
 excerpt: "Une guinguette improvisée dans une grange honfleuraise."
 ---
 

@@ -7,6 +7,7 @@ spectacle: "Ces petits riens"
 prix: "14 € / 9 € réduit"
 billetterie: "https://www.helloasso.com/"
 complet: false
+photo: ""
 excerpt: "Notre cabaret d'improvisation poétique, en matinée à Caen."
 ---
 

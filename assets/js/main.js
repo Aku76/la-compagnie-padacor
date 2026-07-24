@@ -69,4 +69,42 @@
       }
     });
   }
+
+  // --- Pop-up « détails d'un événement » : ouverte au clic sur une carte de l'agenda ---
+  var cartesEvenement = document.querySelectorAll("[data-popup-evenement-declencheur]");
+  if (cartesEvenement.length) {
+    var ouvrirPopupEvenement = function (popup) {
+      popup.hidden = false;
+      document.body.classList.add("popup-evenement-ouverte");
+    };
+    var fermerPopupEvenement = function (popup) {
+      popup.hidden = true;
+      document.body.classList.remove("popup-evenement-ouverte");
+    };
+
+    cartesEvenement.forEach(function (carte) {
+      var popup = document.getElementById(carte.getAttribute("data-popup-evenement-declencheur"));
+      if (!popup) return;
+
+      // Un clic n'importe où sur la carte ouvre la pop-up, sauf sur le
+      // bouton/lien de billetterie qui garde son propre comportement.
+      carte.addEventListener("click", function (evenement) {
+        if (evenement.target.closest(".evenement__action")) return;
+        ouvrirPopupEvenement(popup);
+      });
+
+      popup.querySelectorAll("[data-popup-fermer]").forEach(function (bouton) {
+        bouton.addEventListener("click", function () {
+          fermerPopupEvenement(popup);
+        });
+      });
+    });
+
+    document.addEventListener("keydown", function (evenement) {
+      if (evenement.key !== "Escape") return;
+      document.querySelectorAll(".popup-evenement").forEach(function (popup) {
+        if (!popup.hidden) fermerPopupEvenement(popup);
+      });
+    });
+  }
 })();
