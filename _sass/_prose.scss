@@ -29,7 +29,7 @@
 .page-entete__eyebrow {
   font-family: var(--script);
   color: var(--or-clair);
-  font-size: clamp(1.5rem, 1rem + 1.6vw, 2.2rem);
+  font-size: clamp(1.5rem, calc(1rem + 1.6vw), 2.2rem);
   display: block;
   line-height: 1;
   margin-bottom: 0.4rem;

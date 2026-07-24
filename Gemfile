@@ -16,5 +16,6 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-gem "wdm", "~> 0.1.1", platforms: [:mingw, :x64_mingw, :mswin]
+# Note : wdm (surveillance de fichiers Windows) est volontairement omis car il ne
+# compile pas sur Ruby 3.3+. Le rechargement auto reste possible via --force-polling.
 gem "webrick", "~> 1.8"

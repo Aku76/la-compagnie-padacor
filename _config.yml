@@ -42,6 +42,10 @@ author:
 markdown: kramdown
 timezone: Europe/Paris
 
+# Indispensable pour un site d'agenda : générer les pages des événements
+# dont la date est dans le futur (sinon Jekyll les ignore par défaut).
+future: true
+
 sass:
   style: compressed
   sass_dir: _sass

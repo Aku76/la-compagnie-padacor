@@ -27,11 +27,11 @@
 
   // Échelle de type (fluide, clamp min → idéal → max)
   --t-eyebrow: 0.78rem;
-  --t-body:    clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
-  --t-lead:    clamp(1.15rem, 1.05rem + 0.5vw, 1.4rem);
-  --t-h3:      clamp(1.3rem, 1.1rem + 1vw, 1.75rem);
-  --t-h2:      clamp(1.9rem, 1.4rem + 2.4vw, 3rem);
-  --t-h1:      clamp(2.6rem, 1.6rem + 4.6vw, 5.2rem);
+  --t-body:    clamp(1rem, calc(0.96rem + 0.2vw), 1.12rem);
+  --t-lead:    clamp(1.15rem, calc(1.05rem + 0.5vw), 1.4rem);
+  --t-h3:      clamp(1.3rem, calc(1.1rem + 1vw), 1.75rem);
+  --t-h2:      clamp(1.9rem, calc(1.4rem + 2.4vw), 3rem);
+  --t-h1:      clamp(2.6rem, calc(1.6rem + 4.6vw), 5.2rem);
 
   // --- Rythme & formes ---
   --page-max: 1160px;
