@@ -18,6 +18,12 @@
   stroke-width: 1.4;
   opacity: 0.55;
 }
+.guirlande__fil {
+  // Petit fil jaune qui attache chaque ampoule au câble de la guirlande
+  stroke: var(--or);
+  stroke-width: 1.2;
+  opacity: 0.85;
+}
 .guirlande__ampoule {
   fill: var(--halo);
   transform-box: fill-box;
