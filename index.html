@@ -1,0 +1,191 @@
+---
+layout: default
+title: "La Compagnie Padacor — Théâtre d'improvisation en Normandie"
+description: "Compagnie de théâtre d'improvisation normande. Spectacles poétiques et guinguette pour tout public : agenda, billetterie, formats et présentation de l'équipe."
+---
+
+{%- assign a_venir = site.evenements | where_exp: "e", "e.date >= site.time" | sort: "date" -%}
+{%- assign passes = site.evenements | where_exp: "e", "e.date < site.time" | sort: "date" | reverse -%}
+{%- assign formats = site.spectacles | sort: "ordre" -%}
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-titre">
+  <div class="lucioles" aria-hidden="true">
+    <span class="luciole" style="left:12%;top:28%"></span>
+    <span class="luciole" style="left:24%;top:64%;animation-delay:-2s"></span>
+    <span class="luciole" style="left:47%;top:22%;animation-delay:-4s"></span>
+    <span class="luciole" style="left:68%;top:52%;animation-delay:-1s"></span>
+    <span class="luciole" style="left:82%;top:34%;animation-delay:-3s"></span>
+    <span class="luciole" style="left:90%;top:70%;animation-delay:-5s"></span>
+  </div>
+  <div class="contenu">
+    <p class="hero__eyebrow">La Compagnie Padacor</p>
+    <h1 class="hero__titre" id="hero-titre">Le théâtre qui s'<em>invente</em> devant vous.</h1>
+    <p class="hero__intro">
+      Troupe d'improvisation normande. Le temps d'un soir, sous la guirlande, on écrit
+      ensemble une histoire qui n'existera qu'une fois — la vôtre.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--or" href="{{ '/agenda/' | relative_url }}">
+        Voir l'agenda
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--fantome" href="{{ '/spectacles/' | relative_url }}">Découvrir nos spectacles</a>
+    </div>
+    <div class="hero__meta">
+      <span><b>·</b> Improvisation théâtrale</span>
+      <span><b>·</b> Normandie & alentours</span>
+      <span><b>·</b> Tout public, dès 6 ans</span>
+    </div>
+  </div>
+</section>
+
+<div class="feston" aria-hidden="true">{% include guirlande.html %}</div>
+
+<!-- ============ AGENDA (prochains spectacles) ============ -->
+<section class="section" id="agenda" aria-labelledby="agenda-titre">
+  <div class="contenu">
+    <div class="entete-section">
+      <span class="entete-section__eyebrow">Prochains rendez-vous</span>
+      <h2 class="entete-section__titre" id="agenda-titre">L'agenda</h2>
+      <p class="entete-section__intro">Là où l'on jouera bientôt. Réservez votre soir, on s'occupe de l'imprévu.</p>
+    </div>
+
+    {%- if a_venir.size > 0 -%}
+      <div class="grille" style="gap:1rem">
+        {%- for e in a_venir limit: 3 -%}
+          {% include carte-evenement.html e=e %}
+        {%- endfor -%}
+      </div>
+      <p style="margin-top:2rem">
+        <a class="lien-fleche" href="{{ '/agenda/' | relative_url }}">Tout l'agenda & les spectacles passés
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </p>
+    {%- else -%}
+      <div class="rideau-vide">
+        <h3 class="rideau-vide__titre">Le rideau se prépare…</h3>
+        <p>Aucune date à l'affiche pour l'instant, mais l'imprévu se trame toujours en coulisses.
+           Envie de nous voir jouer près de chez vous ? Écrivez-nous, on invente une soirée.</p>
+        <p style="margin-top:1.5rem">
+          <a class="btn btn--or" href="{{ '/contact/' | relative_url }}">Nous inviter à jouer</a>
+        </p>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<div class="feston" aria-hidden="true">{% include guirlande.html %}</div>
+
+<!-- ============ SPECTACLES (catalogue / formats) ============ -->
+<section class="section" id="spectacles" aria-labelledby="spectacles-titre">
+  <div class="contenu">
+    <div class="entete-section">
+      <span class="entete-section__eyebrow">Notre catalogue</span>
+      <h2 class="entete-section__titre" id="spectacles-titre">Nos formats de spectacles</h2>
+      <p class="entete-section__intro">Trois façons d'improviser, une seule promesse : rien n'est écrit d'avance.</p>
+    </div>
+
+    <div class="grille grille--3">
+      {%- for s in formats -%}
+      <a class="carte spectacle-carte" href="{{ s.url | relative_url }}">
+        <span class="spectacle-carte__format">{{ s.format }}</span>
+        <h3 class="spectacle-carte__titre">{{ s.titre }}</h3>
+        <p class="spectacle-carte__desc">{{ s.accroche }}</p>
+        <div class="spectacle-carte__meta">
+          {%- if s.duree -%}<span class="puce">⏱ {{ s.duree }}</span>{%- endif -%}
+          {%- if s.public -%}<span class="puce">🎭 {{ s.public }}</span>{%- endif -%}
+        </div>
+        <span class="lien-fleche">En savoir plus
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<div class="feston" aria-hidden="true">{% include guirlande.html %}</div>
+
+<!-- ============ TÉMOIGNAGES (iels parlent de nous) ============ -->
+<section class="section" aria-labelledby="temoignages-titre">
+  <div class="contenu">
+    <div class="entete-section">
+      <span class="entete-section__eyebrow">Iels parlent de nous</span>
+      <h2 class="entete-section__titre" id="temoignages-titre">Des soirs qui laissent des traces</h2>
+    </div>
+    <div class="grille grille--3">
+      {%- for t in site.data.temoignages -%}
+      <figure class="carte temoignage" style="margin:0">
+        <blockquote class="temoignage__texte" style="margin:0">{{ t.texte }}</blockquote>
+        <figcaption class="temoignage__source">— {{ t.source }}</figcaption>
+      </figure>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<div class="feston" aria-hidden="true">{% include guirlande.html %}</div>
+
+<!-- ============ LA COMPAGNIE + ÉQUIPE ============ -->
+<section class="section" id="compagnie" aria-labelledby="compagnie-titre">
+  <div class="contenu">
+    <div class="entete-section">
+      <span class="entete-section__eyebrow">La compagnie</span>
+      <h2 class="entete-section__titre" id="compagnie-titre">Une bande d'ami·es qui joue à inventer</h2>
+      <p class="entete-section__intro">
+        Padacor, c'est d'abord une histoire de copains et de copines réuni·es par le goût de
+        l'imprévu. On monte sur scène sans filet, guidé·es par une seule règle : se faire confiance,
+        et faire confiance au public. De cette confiance naissent nos plus belles soirées.
+      </p>
+    </div>
+
+    <div class="grille grille--3">
+      {%- for m in site.data.equipe -%}
+      <div class="carte membre">
+        {%- if m.photo and m.photo != "" -%}
+          <img class="membre__portrait" src="{{ m.photo | relative_url }}" alt="Portrait de {{ m.nom }}" loading="lazy" width="130" height="130">
+        {%- else -%}
+          <div class="membre__initiale" aria-hidden="true">{{ m.nom | slice: 0 }}</div>
+        {%- endif -%}
+        <p class="membre__nom">{{ m.nom }}</p>
+        <p class="membre__role">{{ m.role }}</p>
+        {%- if m.mot -%}<p class="membre__mot">{{ m.mot }}</p>{%- endif -%}
+      </div>
+      {%- endfor -%}
+    </div>
+
+    <p style="margin-top:2rem">
+      <a class="lien-fleche" href="{{ '/la-compagnie/' | relative_url }}">Notre histoire en détail
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </p>
+  </div>
+</section>
+
+<div class="feston" aria-hidden="true">{% include guirlande.html %}</div>
+
+<!-- ============ NEWSLETTER + CONTACT ============ -->
+<section class="section" id="newsletter" aria-labelledby="newsletter-titre">
+  <div class="contenu">
+    <div class="encart">
+      <div class="entete-section" style="margin-bottom:0.5rem">
+        <span class="entete-section__eyebrow">Ne rien manquer</span>
+        <h2 class="entete-section__titre" id="newsletter-titre">La lettre des guirlandes</h2>
+        <p class="entete-section__intro">Quelques mots, quelques dates, jamais plus d'une fois par mois. On vous prévient dès qu'une nouvelle soirée s'allume.</p>
+      </div>
+      {%- comment -%}
+        Formulaire prêt à brancher sur un service (Mailchimp, Brevo, HelloAsso…).
+        Remplacer l'attribut action par l'URL du service choisi.
+      {%- endcomment -%}
+      <form class="formulaire" action="#" method="post" aria-label="Inscription à la newsletter">
+        <label class="visuellement-cache" for="nl-email">Votre adresse e-mail</label>
+        <input class="champ" id="nl-email" type="email" name="email" placeholder="votre@email.fr" required autocomplete="email">
+        <button class="btn btn--or" type="submit">Je m'inscris</button>
+      </form>
+      <p style="color:var(--brume-basse);font-size:0.82rem;margin-top:0.9rem">
+        En vous inscrivant, vous acceptez de recevoir nos actualités. Désinscription possible à tout moment.
+      </p>
+    </div>
+  </div>
+</section>

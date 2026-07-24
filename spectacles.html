@@ -1,0 +1,50 @@
+---
+layout: default
+permalink: /spectacles/
+title: "Nos spectacles d'improvisation"
+description: "Les formats de spectacles de la Compagnie Padacor : cabaret poétique, match d'improvisation et guinguette musicale improvisée. Tout public, en Normandie."
+---
+
+{%- assign formats = site.spectacles | sort: "ordre" -%}
+
+<div class="contenu">
+  <nav class="fil-ariane" aria-label="Fil d'Ariane" style="margin-top:2rem">
+    <a href="{{ '/' | relative_url }}">Accueil</a> · <span>Spectacles</span>
+  </nav>
+  <header class="page-entete" style="padding-top:0.5rem">
+    <span class="page-entete__eyebrow">Notre catalogue</span>
+    <h1 class="page-entete__titre">Nos spectacles</h1>
+    <p class="page-entete__intro">Trois formats, mille soirées possibles. Choisissez l'ambiance, on improvise le reste.</p>
+  </header>
+</div>
+
+<section class="section" style="padding-top:0">
+  <div class="contenu">
+    <div class="grille grille--3">
+      {%- for s in formats -%}
+      <a class="carte spectacle-carte" href="{{ s.url | relative_url }}">
+        <span class="spectacle-carte__format">{{ s.format }}</span>
+        <h2 class="spectacle-carte__titre">{{ s.titre }}</h2>
+        <p class="spectacle-carte__desc">{{ s.accroche }}</p>
+        <div class="spectacle-carte__meta">
+          {%- if s.duree -%}<span class="puce">⏱ {{ s.duree }}</span>{%- endif -%}
+          {%- if s.jauge -%}<span class="puce">👥 {{ s.jauge }}</span>{%- endif -%}
+          {%- if s.public -%}<span class="puce">🎭 {{ s.public }}</span>{%- endif -%}
+        </div>
+        <span class="lien-fleche">Découvrir
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      {%- endfor -%}
+    </div>
+
+    <div class="encart" style="margin-top:3rem">
+      <h2 class="entete-section__titre">Un lieu, une envie, une occasion ?</h2>
+      <p style="color:var(--brume);max-width:52ch;margin-top:0.8rem">
+        Festival, salle, mariage, guinguette, comité d'entreprise… Nos spectacles s'adaptent à
+        votre lieu et à votre public. Parlons-en.
+      </p>
+      <p style="margin-top:1.5rem"><a class="btn btn--or" href="{{ '/contact/' | relative_url }}">Demander un devis</a></p>
+    </div>
+  </div>
+</section>

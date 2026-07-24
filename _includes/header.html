@@ -1,0 +1,29 @@
+<header class="site-entete" id="haut">
+  <div class="contenu site-entete__barre">
+    <a class="marque" href="{{ '/' | relative_url }}" aria-label="La Compagnie Padacor — accueil">
+      <img class="marque__logo" src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="" width="44" height="44">
+      <span class="marque__nom">
+        <b>La Compagnie Padacor</b>
+        <span>Théâtre d'improvisation</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <ul class="nav__liens">
+        {%- for item in site.nav -%}
+          {%- assign actif = false -%}
+          {%- if page.url == item.url or page.url contains item.url and item.url != "/" -%}{%- assign actif = true -%}{%- endif -%}
+          <li>
+            <a class="nav__lien" href="{{ item.url | relative_url }}"{% if actif %} aria-current="page"{% endif %}>{{ item.titre }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+      <a class="btn btn--or btn--petit" href="{{ '/agenda/' | relative_url }}">
+        Billetterie
+      </a>
+      <button class="menu-bascule" type="button" aria-expanded="false" aria-controls="nav-liens" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>

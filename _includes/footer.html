@@ -1,0 +1,36 @@
+<div class="feston" aria-hidden="true">{% include guirlande.html %}</div>
+<footer class="site-pied" role="contentinfo">
+  <div class="contenu">
+    <div class="site-pied__grille">
+      <div>
+        <p class="site-pied__titre">La Compagnie Padacor</p>
+        <p class="site-pied__intro">Théâtre d'improvisation en Normandie. On écrit l'histoire ensemble, le temps d'un soir, sous la guirlande.</p>
+        {% include reseaux.html %}
+      </div>
+
+      <nav aria-label="Plan du site">
+        <p class="site-pied__titre">Explorer</p>
+        <ul class="site-pied__liste">
+          {%- for item in site.nav -%}
+          <li><a href="{{ item.url | relative_url }}">{{ item.titre }}</a></li>
+          {%- endfor -%}
+          <li><a href="{{ '/mentions-legales/' | relative_url }}">Mentions légales</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="site-pied__titre">Nous joindre</p>
+        <ul class="site-pied__liste">
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><span style="color:var(--brume)">{{ site.region }}, {{ site.pays }}</span></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Programmer un spectacle</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-pied__bas">
+      <span>© {{ site.time | date: "%Y" }} La Compagnie Padacor. Tous droits réservés.</span>
+      <span>Site poétique, tissé à la main sous les guirlandes.</span>
+    </div>
+  </div>
+</footer>

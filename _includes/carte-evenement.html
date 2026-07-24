@@ -1,0 +1,45 @@
+{%- comment -%}
+  Carte d'un événement de l'agenda.
+  Paramètre : include.e = un document de la collection evenements.
+  include.passe = true pour la présentation « spectacles passés » (billetterie masquée).
+{%- endcomment -%}
+{%- assign e = include.e -%}
+{%- assign jour = e.date | date: "%-d" -%}
+{%- assign moisnum = e.date | date: "%-m" | plus: 0 -%}
+{%- assign annee = e.date | date: "%Y" -%}
+{%- assign heure = e.date | date: "%H:%M" -%}
+<article class="carte evenement">
+  <div class="evenement__date">
+    <time datetime="{{ e.date | date_to_xmlschema }}">
+      <span class="evenement__jour">{{ jour }}</span>
+      <span class="evenement__mois">{{ site.data.mois.court[moisnum] }}</span>
+      <span class="evenement__annee">{{ annee }}</span>
+    </time>
+  </div>
+
+  <div class="evenement__corps">
+    <h3 class="evenement__titre">{{ e.titre }}</h3>
+    <p class="evenement__lieu">
+      <span>📍 {{ e.lieu }}{% if e.ville %}, {{ e.ville }}{% endif %}</span>
+      {%- if heure != "00:00" %}<span>🕗 {{ heure }}</span>{% endif -%}
+      {%- if e.prix and e.prix != "" %}<span>🎟 {{ e.prix }}</span>{% endif -%}
+    </p>
+  </div>
+
+  <div class="evenement__action">
+    {%- unless include.passe -%}
+      {%- if e.complet -%}
+        <span class="badge badge--complet">Complet</span>
+      {%- elsif e.billetterie and e.billetterie != "" -%}
+        <a class="btn btn--or btn--petit" href="{{ e.billetterie }}" target="_blank" rel="noopener">
+          Réserver
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      {%- else -%}
+        <a class="btn btn--fantome btn--petit" href="{{ '/contact/' | relative_url }}">Nous écrire</a>
+      {%- endif -%}
+    {%- else -%}
+      {%- if e.spectacle -%}<span class="badge">{{ e.spectacle }}</span>{%- endif -%}
+    {%- endunless -%}
+  </div>
+</article>

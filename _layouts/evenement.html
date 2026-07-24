@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{%- assign jour = page.date | date: "%-d" -%}
+{%- assign moisnum = page.date | date: "%-m" | plus: 0 -%}
+{%- assign annee = page.date | date: "%Y" -%}
+{%- assign heure = page.date | date: "%H:%M" -%}
+<article class="section">
+  <div class="contenu">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane">
+      <a href="{{ '/' | relative_url }}">Accueil</a> ·
+      <a href="{{ '/agenda/' | relative_url }}">Agenda</a> ·
+      <span>{{ page.titre }}</span>
+    </nav>
+
+    <header class="page-entete" style="padding-top:0">
+      <span class="page-entete__eyebrow">{{ jour }} {{ site.data.mois.long[moisnum] }} {{ annee }}</span>
+      <h1 class="page-entete__titre">{{ page.titre }}</h1>
+      <p class="page-entete__intro">
+        📍 {{ page.lieu }}{% if page.ville %}, {{ page.ville }}{% endif %}{% if heure != "00:00" %} · 🕗 {{ heure }}{% endif %}
+      </p>
+    </header>
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    <p style="margin-top:2.5rem">
+      {%- if page.complet -%}
+        <span class="badge badge--complet">Complet — plus de places</span>
+      {%- elsif page.billetterie and page.billetterie != "" -%}
+        <a class="btn btn--or" href="{{ page.billetterie }}" target="_blank" rel="noopener">Réserver une place</a>
+      {%- else -%}
+        <a class="btn btn--or" href="{{ '/contact/' | relative_url }}">Nous contacter</a>
+      {%- endif -%}
+      <a class="lien-fleche" href="{{ '/agenda/' | relative_url }}" style="margin-left:1rem">Tout l'agenda
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </p>
+  </div>
+</article>

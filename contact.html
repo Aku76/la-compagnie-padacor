@@ -1,0 +1,64 @@
+---
+layout: default
+permalink: /contact/
+title: "Nous contacter"
+description: "Contacter la Compagnie Padacor pour programmer un spectacle d'improvisation en Normandie, demander un devis ou poser une question."
+---
+
+<div class="contenu">
+  <nav class="fil-ariane" aria-label="Fil d'Ariane" style="margin-top:2rem">
+    <a href="{{ '/' | relative_url }}">Accueil</a> · <span>Contact</span>
+  </nav>
+  <header class="page-entete" style="padding-top:0.5rem">
+    <span class="page-entete__eyebrow">Écrivez-nous</span>
+    <h1 class="page-entete__titre">Programmons une soirée</h1>
+    <p class="page-entete__intro">Une date, un lieu, une envie ? On répond vite, et toujours avec le sourire.</p>
+  </header>
+</div>
+
+<section class="section" style="padding-top:0">
+  <div class="contenu">
+    <div class="grille grille--2" style="align-items:start">
+
+      <div class="encart">
+        {%- comment -%}
+          Formulaire prêt à brancher sur un service sans serveur (Formspree, Basin, HelloAsso…).
+          Remplacer l'attribut action par l'URL fournie par le service choisi.
+        {%- endcomment -%}
+        <form class="formulaire" style="flex-direction:column;gap:1rem" action="#" method="post" aria-label="Formulaire de contact">
+          <div style="width:100%">
+            <label class="contact-bloc__label" for="c-nom">Votre nom</label>
+            <input class="champ" id="c-nom" name="nom" type="text" required autocomplete="name" style="width:100%;border-radius:var(--rayon)">
+          </div>
+          <div style="width:100%">
+            <label class="contact-bloc__label" for="c-email">Votre e-mail</label>
+            <input class="champ" id="c-email" name="email" type="email" required autocomplete="email" style="width:100%;border-radius:var(--rayon)">
+          </div>
+          <div style="width:100%">
+            <label class="contact-bloc__label" for="c-message">Votre message</label>
+            <textarea class="champ" id="c-message" name="message" rows="5" required style="width:100%;border-radius:var(--rayon);resize:vertical"></textarea>
+          </div>
+          <button class="btn btn--or" type="submit" style="align-self:flex-start">Envoyer</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="contact-grille" style="grid-template-columns:1fr">
+          <div class="contact-bloc">
+            <p class="contact-bloc__label">Par e-mail</p>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </div>
+          <div class="contact-bloc" style="margin-top:1.5rem">
+            <p class="contact-bloc__label">Territoire</p>
+            <p style="font-family:var(--display);font-size:1.15rem;color:var(--creme)">{{ site.region }}, {{ site.pays }}</p>
+          </div>
+          <div class="contact-bloc" style="margin-top:1.5rem">
+            <p class="contact-bloc__label">Sur les réseaux</p>
+            {% include reseaux.html %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

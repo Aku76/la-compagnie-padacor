@@ -1,0 +1,13 @@
+---
+# Ces tirets déclenchent la compilation SCSS par Jekyll.
+---
+
+// Polices : chargées via Google Fonts (voir head.html pour le préchargement).
+// Fraunces (display), Ephesis (script), Figtree (corps).
+
+@import "tokens";
+@import "base";
+@import "layout";
+@import "composants";
+@import "guirlande";
+@import "prose";

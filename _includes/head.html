@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12100D">
+
+{%- comment -%} SEO : jekyll-seo-tag génère title, description, Open Graph, Twitter, canonical {%- endcomment -%}
+{% seo %}
+
+{%- comment -%} Favicon à partir du logo {%- endcomment -%}
+<link rel="icon" href="{{ '/assets/images/logo.jpg' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/images/logo.jpg' | relative_url }}">
+
+{%- comment -%} Polices : préconnexion + chargement performant {%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Ephesis&family=Figtree:wght@300..700&display=swap">
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+{%- comment -%} Flux Atom de l'agenda {%- endcomment -%}
+{% feed_meta %}
+
+{% include jsonld.html %}

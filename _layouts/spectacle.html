@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<article class="section">
+  <div class="contenu">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane">
+      <a href="{{ '/' | relative_url }}">Accueil</a> ·
+      <a href="{{ '/spectacles/' | relative_url }}">Spectacles</a> ·
+      <span>{{ page.titre }}</span>
+    </nav>
+
+    <header class="page-entete" style="padding-top:0">
+      {%- if page.format -%}<span class="spectacle-carte__format">{{ page.format }}</span>{%- endif -%}
+      <h1 class="page-entete__titre">{{ page.titre }}</h1>
+      {%- if page.accroche -%}<p class="page-entete__intro">{{ page.accroche }}</p>{%- endif -%}
+
+      {%- if page.duree or page.jauge or page.public -%}
+      <div class="spectacle-carte__meta" style="margin-top:1.5rem">
+        {%- if page.duree -%}<span class="puce">⏱ {{ page.duree }}</span>{%- endif -%}
+        {%- if page.jauge -%}<span class="puce">👥 {{ page.jauge }}</span>{%- endif -%}
+        {%- if page.public -%}<span class="puce">🎭 {{ page.public }}</span>{%- endif -%}
+      </div>
+      {%- endif -%}
+    </header>
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    <p style="margin-top:2.5rem">
+      <a class="btn btn--or" href="{{ '/contact/' | relative_url }}">Programmer ce spectacle</a>
+      <a class="lien-fleche" href="{{ '/spectacles/' | relative_url }}" style="margin-left:1rem">Retour au catalogue
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </p>
+  </div>
+</article>

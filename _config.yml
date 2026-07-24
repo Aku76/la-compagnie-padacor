@@ -1,0 +1,89 @@
+# =========================================================
+#  La Compagnie Padacor — configuration Jekyll
+#  Compagnie de théâtre d'improvisation · Normandie
+# =========================================================
+
+# --- Identité du site (utilisée pour le SEO et les métadonnées) ---
+title: "La Compagnie Padacor"
+tagline: "Théâtre d'improvisation en Normandie"
+description: >-
+  La Compagnie Padacor, troupe de théâtre d'improvisation normande.
+  Spectacles poétiques et guinguette pour tout public : agenda, billetterie,
+  formats de spectacles et présentation de l'équipe.
+lang: fr
+locale: fr_FR
+
+# URL de production — à remplacer par le domaine final le moment venu.
+# Pour un site GitHub Pages de projet : url = https://<compte>.github.io
+#                                       baseurl = /<nom-du-repo>
+url: "https://lacompagniepadacor.fr"
+baseurl: ""
+
+# --- Coordonnées & réseaux (réutilisés partout + JSON-LD) ---
+email: "contact@lacompagniepadacor.fr"
+region: "Normandie"
+pays: "France"
+
+reseaux:
+  instagram: "https://www.instagram.com/lacompagniepadacor"
+  facebook: "https://www.facebook.com/lacompagniepadacor"
+  youtube: ""
+  billetterie: "https://www.helloasso.com/"   # billetterie par défaut
+
+# --- Image de partage par défaut (Open Graph / réseaux) ---
+image: "/assets/images/logo.jpg"
+logo: "/assets/images/logo.jpg"
+
+# --- Auteur (pour jekyll-seo-tag) ---
+author:
+  name: "La Compagnie Padacor"
+
+# --- Construction ---
+markdown: kramdown
+timezone: Europe/Paris
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# --- Collections : événements (agenda) et spectacles (catalogue) ---
+collections:
+  evenements:
+    output: true
+    permalink: /agenda/:slug/
+    sort_by: date
+  spectacles:
+    output: true
+    permalink: /spectacles/:slug/
+
+defaults:
+  - scope: { path: "", type: "evenements" }
+    values: { layout: "evenement" }
+  - scope: { path: "", type: "spectacles" }
+    values: { layout: "spectacle" }
+  - scope: { path: "" }
+    values: { layout: "page" }
+
+# --- Plugins compatibles GitHub Pages ---
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: /agenda/flux.xml
+
+# --- Navigation principale (ordre affiché) ---
+nav:
+  - { titre: "Agenda", url: "/agenda/" }
+  - { titre: "Spectacles", url: "/spectacles/" }
+  - { titre: "La compagnie", url: "/la-compagnie/" }
+  - { titre: "Contact", url: "/contact/" }
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CLAUDE.md
+  - vendor
+  - "*.pdf"

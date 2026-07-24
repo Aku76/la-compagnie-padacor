@@ -1,0 +1,28 @@
+# L'équipe de la Compagnie Padacor.
+# Écriture inclusive : le champ « role » se veut épicène.
+# photo : chemin vers un portrait (laisser vide → initiale dorée générée).
+
+- nom: "Alison"
+  role: "Metteuse en scène"
+  mot: "Celle qui tient les fils de la guirlande et laisse la lumière trouver chacun·e."
+  photo: ""
+
+- nom: "Steeven"
+  role: "Comédien improvisateur"
+  mot: "Un sourire, une réplique, et le décor s'invente tout seul."
+  photo: ""
+
+- nom: "Clément"
+  role: "Comédien improvisateur"
+  mot: "L'art de dire beaucoup avec trois fois rien."
+  photo: ""
+
+- nom: "Manon"
+  role: "Comédienne improvisatrice"
+  mot: "La poésie qui se faufile entre deux éclats de rire."
+  photo: ""
+
+- nom: "Sébastien"
+  role: "Comédien improvisateur"
+  mot: "Les silences les plus habités de la troupe."
+  photo: ""

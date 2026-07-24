@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="section">
+  <div class="contenu">
+    {%- if page.fil_ariane != false -%}
+    <nav class="fil-ariane" aria-label="Fil d'Ariane">
+      <a href="{{ '/' | relative_url }}">Accueil</a> · <span>{{ page.title }}</span>
+    </nav>
+    {%- endif -%}
+
+    <header class="page-entete" style="padding-top:0">
+      {%- if page.eyebrow -%}<span class="page-entete__eyebrow">{{ page.eyebrow }}</span>{%- endif -%}
+      <h1 class="page-entete__titre">{{ page.title }}</h1>
+      {%- if page.intro -%}<p class="page-entete__intro">{{ page.intro }}</p>{%- endif -%}
+    </header>
+
+    <div class="prose">
+      {{ content }}
+    </div>
+  </div>
+</article>

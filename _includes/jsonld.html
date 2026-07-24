@@ -1,0 +1,65 @@
+{%- comment -%}
+  Données structurées Schema.org pour le référencement :
+  - PerformingGroup (l'identité de la compagnie), présent sur toutes les pages
+  - Event pour chaque spectacle à venir, uniquement sur l'accueil et l'agenda
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PerformingGroup",
+  "name": "La Compagnie Padacor",
+  "description": {{ site.description | strip_newlines | jsonify }},
+  "url": {{ '/' | absolute_url | jsonify }},
+  "logo": {{ site.logo | absolute_url | jsonify }},
+  "image": {{ site.image | absolute_url | jsonify }},
+  "email": {{ site.email | jsonify }},
+  "genre": "Théâtre d'improvisation",
+  "areaServed": { "@type": "AdministrativeArea", "name": "Normandie" },
+  "sameAs": [
+    {%- assign liens = "" -%}
+    {%- if site.reseaux.instagram != "" -%}{%- assign liens = liens | append: site.reseaux.instagram | append: "|" -%}{%- endif -%}
+    {%- if site.reseaux.facebook != "" -%}{%- assign liens = liens | append: site.reseaux.facebook | append: "|" -%}{%- endif -%}
+    {%- if site.reseaux.youtube != "" -%}{%- assign liens = liens | append: site.reseaux.youtube | append: "|" -%}{%- endif -%}
+    {%- assign liste = liens | split: "|" -%}
+    {%- for l in liste -%}{{ l | jsonify }}{%- unless forloop.last %},{% endunless -%}{%- endfor -%}
+  ]
+}
+</script>
+{%- if page.url == "/" or page.url contains "/agenda" -%}
+  {%- assign a_venir = site.evenements | where_exp: "e", "e.date >= site.time" | sort: "date" -%}
+  {%- for e in a_venir -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TheaterEvent",
+    "name": {{ e.titre | jsonify }},
+    "startDate": {{ e.date | date_to_xmlschema | jsonify }},
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "url": {{ e.url | absolute_url | jsonify }},
+    "description": {{ e.description | default: e.titre | jsonify }},
+    "location": {
+      "@type": "Place",
+      "name": {{ e.lieu | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": {{ e.ville | jsonify }},
+        "addressRegion": "Normandie",
+        "addressCountry": "FR"
+      }
+    },
+    "performer": { "@type": "PerformingGroup", "name": "La Compagnie Padacor" },
+    "organizer": { "@type": "PerformingGroup", "name": "La Compagnie Padacor" }
+    {%- if e.billetterie and e.billetterie != "" -%},
+    "offers": {
+      "@type": "Offer",
+      "url": {{ e.billetterie | jsonify }},
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "EUR"
+      {%- if e.prix and e.prix != "" -%}, "price": {{ e.prix | jsonify }}{%- endif -%}
+    }
+    {%- endif -%}
+  }
+  </script>
+  {%- endfor -%}
+{%- endif -%}

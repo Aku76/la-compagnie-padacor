@@ -1,0 +1,42 @@
+// =========================================================
+//  Prose — mise en forme des contenus rédigés (pages, articles)
+// =========================================================
+
+.prose {
+  max-width: 62ch;
+}
+.prose > * + * { margin-top: 1.1em; }
+.prose h2 { font-size: var(--t-h2); margin-top: 2em; }
+.prose h3 { font-size: var(--t-h3); margin-top: 1.6em; color: var(--creme); }
+.prose p { color: var(--creme); }
+.prose ul, .prose ol { padding-left: 1.3em; color: var(--creme); }
+.prose li { margin-bottom: 0.4em; }
+.prose li::marker { color: var(--or); }
+.prose blockquote {
+  border-left: 2px solid var(--or);
+  padding-left: 1.2rem;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: var(--t-lead);
+  color: var(--brume);
+}
+.prose a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--or) 45%, transparent); }
+.prose a:hover { text-decoration-color: var(--or); }
+.prose hr { border: 0; border-top: 1px solid var(--bordure); margin: 2.5em 0; }
+
+// En-tête de page intérieure
+.page-entete { padding-block: clamp(6rem, 12vh, 9rem) clamp(2rem, 5vw, 3.5rem); }
+.page-entete__eyebrow {
+  font-family: var(--script);
+  color: var(--or-clair);
+  font-size: clamp(1.5rem, 1rem + 1.6vw, 2.2rem);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.page-entete__titre { font-size: var(--t-h1); max-width: 18ch; }
+.page-entete__intro { color: var(--brume); font-size: var(--t-lead); max-width: 52ch; margin-top: 1rem; }
+
+.fil-ariane { color: var(--brume-basse); font-size: 0.85rem; margin-bottom: 1.5rem; }
+.fil-ariane a { color: var(--brume); }
+.fil-ariane a:hover { color: var(--or-clair); }

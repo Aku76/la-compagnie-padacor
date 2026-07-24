@@ -1,0 +1,50 @@
+---
+layout: default
+permalink: /agenda/
+title: "Agenda & billetterie"
+description: "Toutes les dates de la Compagnie Padacor : prochains spectacles d'improvisation en Normandie, billetterie en ligne et représentations passées."
+---
+
+{%- assign a_venir = site.evenements | where_exp: "e", "e.date >= site.time" | sort: "date" -%}
+{%- assign passes = site.evenements | where_exp: "e", "e.date < site.time" | sort: "date" | reverse -%}
+
+<div class="contenu">
+  <nav class="fil-ariane" aria-label="Fil d'Ariane" style="margin-top:2rem">
+    <a href="{{ '/' | relative_url }}">Accueil</a> · <span>Agenda</span>
+  </nav>
+  <header class="page-entete" style="padding-top:0.5rem">
+    <span class="page-entete__eyebrow">Où nous voir</span>
+    <h1 class="page-entete__titre">Agenda & billetterie</h1>
+    <p class="page-entete__intro">Réservez votre soir : chaque date est une histoire qui ne se jouera qu'une fois.</p>
+  </header>
+</div>
+
+<section class="section" style="padding-top:0" aria-labelledby="a-venir-titre">
+  <div class="contenu">
+    <h2 class="entete-section__titre" id="a-venir-titre" style="margin-bottom:1.5rem">À venir</h2>
+    {%- if a_venir.size > 0 -%}
+      <div class="grille" style="gap:1rem">
+        {%- for e in a_venir -%}{% include carte-evenement.html e=e %}{%- endfor -%}
+      </div>
+    {%- else -%}
+      <div class="rideau-vide">
+        <h3 class="rideau-vide__titre">Le rideau se prépare…</h3>
+        <p>Aucune date à l'affiche pour l'instant. Envie de nous voir jouer près de chez vous ?
+           Écrivez-nous, on invente une soirée rien que pour votre lieu.</p>
+        <p style="margin-top:1.5rem"><a class="btn btn--or" href="{{ '/contact/' | relative_url }}">Nous inviter à jouer</a></p>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{%- if passes.size > 0 -%}
+<div class="feston" aria-hidden="true">{% include guirlande.html %}</div>
+<section class="section" aria-labelledby="passes-titre">
+  <div class="contenu">
+    <h2 class="entete-section__titre" id="passes-titre" style="margin-bottom:1.5rem">Déjà joué</h2>
+    <div class="grille" style="gap:1rem">
+      {%- for e in passes -%}{% include carte-evenement.html e=e passe=true %}{%- endfor -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
