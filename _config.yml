@@ -16,7 +16,7 @@ locale: fr_FR
 # URL de production — à remplacer par le domaine final le moment venu.
 # Pour un site GitHub Pages de projet : url = https://<compte>.github.io
 #                                       baseurl = /<nom-du-repo>
-url: "https://lacompagniepadacor.fr"
+url: "https://www.lacompagniepadacor.fr"
 baseurl: ""
 
 # --- Coordonnées & réseaux (réutilisés partout + JSON-LD) ---
