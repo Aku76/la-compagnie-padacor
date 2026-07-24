@@ -5,14 +5,19 @@
 {%- endcomment -%}
 <svg class="guirlande" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true" focusable="false">
   <path class="guirlande__cable" d="M0,4 C150,54 300,54 450,4 C600,-46 750,54 900,4 C1050,-46 1200,54 1350,4" />
-  {%- comment -%} Ampoules réparties le long des festons {%- endcomment -%}
-  {%- assign positions = "40,26 110,38 150,40 260,40 340,38 410,26 490,18 560,32 640,38 710,32 790,18 870,26 940,38 1010,40 1120,40 1160,32" | split: " " -%}
+  {%- comment -%}
+    Ampoules réparties le long des festons. Chaque paire "x,y" est le point
+    d'attache réel sur la courbe ci-dessus (calculé depuis l'équation de
+    Bézier), pour que le fil rejoigne toujours le câble sans le manquer.
+  {%- endcomment -%}
+  {%- assign positions = "40,16 110,32 150,37 260,41 340,32 410,16 490,-6 560,-10 640,-2 710,10 790,18 870,12 940,-6 1010,-10 1120,3 1160,10" | split: " " -%}
   {%- for p in positions -%}
     {%- assign xy = p | split: "," -%}
     {%- assign x = xy[0] -%}
-    {%- assign y = xy[1] -%}
-    <circle class="guirlande__halo" cx="{{ x }}" cy="{{ y }}" r="7" />
-    <line class="guirlande__cable" x1="{{ x }}" y1="{{ y | minus: 8 }}" x2="{{ x }}" y2="{{ y }}" />
-    <circle class="guirlande__ampoule" cx="{{ x }}" cy="{{ y }}" r="3" />
+    {%- assign y_attache = xy[1] -%}
+    {%- assign y_ampoule = y_attache | plus: 8 -%}
+    <line class="guirlande__fil" x1="{{ x }}" y1="{{ y_attache }}" x2="{{ x }}" y2="{{ y_ampoule }}" />
+    <circle class="guirlande__halo" cx="{{ x }}" cy="{{ y_ampoule }}" r="7" />
+    <circle class="guirlande__ampoule" cx="{{ x }}" cy="{{ y_ampoule }}" r="3" />
   {%- endfor -%}
 </svg>
