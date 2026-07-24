@@ -7,6 +7,7 @@ spectacle: "Le Match d'improvisation"
 prix: "10 €"
 billetterie: ""
 complet: true
+photo: ""
 excerpt: "Un tournoi de printemps à guichets fermés au Havre."
 ---
 

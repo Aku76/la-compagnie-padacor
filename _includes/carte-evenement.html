@@ -2,13 +2,16 @@
   Carte d'un événement de l'agenda.
   Paramètre : include.e = un document de la collection evenements.
   include.passe = true pour la présentation « spectacles passés » (billetterie masquée).
+  Un clic sur la carte (hors bouton de billetterie) ouvre une pop-up de détails
+  (photo, description longue, bouton « Réserver »).
 {%- endcomment -%}
 {%- assign e = include.e -%}
 {%- assign jour = e.date | date: "%-d" -%}
 {%- assign moisnum = e.date | date: "%-m" | plus: 0 -%}
 {%- assign annee = e.date | date: "%Y" -%}
 {%- assign heure = e.date | date: "%H:%M" -%}
-<article class="carte evenement">
+{%- assign id_popup = "evenement-detail-" | append: e.slug -%}
+<article class="carte evenement" data-popup-evenement-declencheur="{{ id_popup }}">
   <div class="evenement__date">
     <time datetime="{{ e.date | date_to_xmlschema }}">
       <span class="evenement__jour">{{ jour }}</span>
@@ -24,6 +27,10 @@
       {%- if heure != "00:00" %}<span>🕗 {{ heure }}</span>{% endif -%}
       {%- if e.prix and e.prix != "" %}<span>🎟 {{ e.prix }}</span>{% endif -%}
     </p>
+    <button type="button" class="lien-fleche evenement__details-btn">
+      Plus de détails
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
   </div>
 
   <div class="evenement__action">
@@ -43,3 +50,42 @@
     {%- endunless -%}
   </div>
 </article>
+
+<div class="popup-evenement" id="{{ id_popup }}" hidden>
+  <div class="popup-evenement__fond" data-popup-fermer></div>
+  <div class="popup-evenement__panneau" role="dialog" aria-modal="true" aria-labelledby="{{ id_popup }}-titre">
+    <button class="popup-evenement__fermer" type="button" data-popup-fermer aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    {%- if e.photo and e.photo != "" -%}
+      <img class="popup-evenement__photo" src="{{ e.photo | relative_url }}" alt="" loading="lazy">
+    {%- endif -%}
+    <div class="popup-evenement__corps">
+      <p class="popup-evenement__eyebrow">{{ jour }} {{ site.data.mois.long[moisnum] }} {{ annee }}{% if heure != "00:00" %} · {{ heure }}{% endif %}</p>
+      <h2 class="popup-evenement__titre" id="{{ id_popup }}-titre">{{ e.titre }}</h2>
+      <p class="popup-evenement__lieu">
+        <span>📍 {{ e.lieu }}{% if e.ville %}, {{ e.ville }}{% endif %}</span>
+        {%- if e.prix and e.prix != "" %}<span>🎟 {{ e.prix }}</span>{% endif -%}
+      </p>
+      {%- if e.content and e.content != "" -%}
+        <div class="prose popup-evenement__texte">{{ e.content }}</div>
+      {%- endif -%}
+      <p class="popup-evenement__action">
+        {%- unless include.passe -%}
+          {%- if e.complet -%}
+            <span class="badge badge--complet">Complet</span>
+          {%- elsif e.billetterie and e.billetterie != "" -%}
+            <a class="btn btn--or" href="{{ e.billetterie }}" target="_blank" rel="noopener">
+              Réserver
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          {%- else -%}
+            <a class="btn btn--fantome" href="{{ '/contact/' | relative_url }}">Nous écrire</a>
+          {%- endif -%}
+        {%- else -%}
+          {%- if e.spectacle -%}<span class="badge">{{ e.spectacle }}</span>{%- endif -%}
+        {%- endunless -%}
+      </p>
+    </div>
+  </div>
+</div>
