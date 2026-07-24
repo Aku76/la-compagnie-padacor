@@ -1,0 +1,21 @@
+{%- comment -%}
+  Pop-up "site en construction" : affichée une seule fois, lors de la toute
+  première visite (mémorisé en localStorage). Ne réapparaît plus ensuite,
+  même en changeant de page sur le site.
+{%- endcomment -%}
+<div class="popup-chantier" id="popup-chantier" hidden>
+  <div class="popup-chantier__fond" data-popup-fermer></div>
+  <div class="popup-chantier__panneau" role="dialog" aria-modal="true" aria-labelledby="popup-chantier-titre">
+    <button class="popup-chantier__fermer" type="button" data-popup-fermer aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <p class="popup-chantier__eyebrow">Psst…</p>
+    <h2 class="popup-chantier__titre" id="popup-chantier-titre">Le décor se termine encore</h2>
+    <p class="popup-chantier__texte">
+      Notre site est en cours de construction : quelques pages, textes et photos ne sont
+      encore que des esquisses de coulisses. Iels prennent forme petit à petit — merci de
+      votre indulgence, et à très vite sur les planches&nbsp;!
+    </p>
+    <button class="btn btn--or" type="button" data-popup-fermer>Entrer quand même</button>
+  </div>
+</div>
