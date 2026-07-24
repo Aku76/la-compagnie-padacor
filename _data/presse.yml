@@ -1,0 +1,30 @@
+# « Iels parlent de nous » — articles de presse qui parlent de la compagnie.
+# Le site trie automatiquement par date décroissante (pas besoin de trier ici).
+#
+# Champs :
+#   titre : titre de l'article
+#   media : nom du journal / média
+#   date  : date de parution (AAAA-MM-JJ)
+#   url   : lien vers l'article en ligne (laisser vide si absent du web)
+#   image : photo/scan de l'article, utilisée si `url` est vide
+#           (déposer le fichier dans assets/images/presse/)
+#
+# Entrées de démonstration à remplacer par les vraies parutions.
+
+- titre: "Un été à improviser : la Compagnie Padacor illumine les guinguettes normandes"
+  media: "Ouest-France"
+  date: 2026-06-02
+  url: "https://www.ouest-france.fr/"
+  image: ""
+
+- titre: "Padacor, la troupe qui n'écrit jamais deux fois la même histoire"
+  media: "Actu.fr"
+  date: 2026-03-18
+  url: "https://actu.fr/"
+  image: ""
+
+- titre: "Portrait : une compagnie d'improvisation qui fait salle comble"
+  media: "France Bleu Normandie"
+  date: 2025-11-05
+  url: "https://www.francebleu.fr/"
+  image: ""

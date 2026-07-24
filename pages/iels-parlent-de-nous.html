@@ -1,0 +1,36 @@
+---
+layout: default
+permalink: /iels-parlent-de-nous/
+title: "Iels parlent de nous"
+description: "La Compagnie Padacor dans la presse : tous les articles parlant de la troupe de théâtre d'improvisation normande."
+---
+
+{%- assign presse = site.data.presse | sort: "date" | reverse -%}
+
+<div class="contenu">
+  <nav class="fil-ariane" aria-label="Fil d'Ariane" style="margin-top:2rem">
+    <a href="{{ '/' | relative_url }}">Accueil</a> · <span>Iels parlent de nous</span>
+  </nav>
+  <header class="page-entete" style="padding-top:0.5rem">
+    <span class="page-entete__eyebrow">Dans la presse</span>
+    <h1 class="page-entete__titre">Iels parlent de nous</h1>
+    <p class="page-entete__intro">Ce que la presse et les médias normands racontent de nos soirées d'improvisation.</p>
+  </header>
+</div>
+
+<section class="section" style="padding-top:0">
+  <div class="contenu">
+    {%- if presse.size > 0 -%}
+      <div class="grille grille--3">
+        {%- for p in presse -%}
+          {% include carte-presse.html p=p %}
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+      <div class="rideau-vide">
+        <h3 class="rideau-vide__titre">Silence, on tourne…</h3>
+        <p>Aucun article référencé pour l'instant. Revenez bientôt : la presse commence à en parler.</p>
+      </div>
+    {%- endif -%}
+  </div>
+</section>

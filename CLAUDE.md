@@ -36,13 +36,14 @@ construit en **Jekyll** pour un hébergement **GitHub Pages**. Objectif n°1 : l
 ```
 _config.yml            Config, navigation (site.nav), réseaux, collections
 Gemfile                Dépendances (github-pages + plugins)
-index.html             Accueil (hero + agenda + spectacles + témoignages + équipe + newsletter)
+index.html             Accueil (hero + agenda + spectacles + presse + équipe + newsletter)
 404.html               Page d'erreur
 robots.txt             SEO
 
 pages/                 Pages fixes (URL fixée par le permalink de chaque fichier,
   agenda.html            /agenda/  — liste à venir + passés, billetterie
   spectacles.html        /spectacles/ — catalogue des formats
+  iels-parlent-de-nous.html  /iels-parlent-de-nous/ — tous les articles de presse
   la-compagnie.md        /la-compagnie/ — histoire + démarche + équipe
   contact.html           /contact/ — formulaire (à brancher) + coordonnées
   mentions-legales.md    /mentions-legales/
@@ -51,8 +52,8 @@ pages/                 Pages fixes (URL fixée par le permalink de chaque fichie
   #      doivent rester à la racine (contrainte Jekyll).
 
 _layouts/   default, page, spectacle, evenement
-_includes/  head, header, footer, guirlande, carte-evenement, reseaux, jsonld
-_data/      equipe.yml, temoignages.yml, mois.yml (mois FR)
+_includes/  head, header, footer, guirlande, carte-evenement, carte-presse, reseaux, jsonld
+_data/      equipe.yml, presse.yml, mois.yml (mois FR)
 _sass/      _tokens, _base, _layout, _composants, _guirlande, _prose
 _evenements/  collection Agenda (1 fichier = 1 date)
 _spectacles/  collection Catalogue (1 fichier = 1 format)
@@ -85,6 +86,14 @@ complet: false                      # true => badge « Complet », masque la bil
 Un fichier dans `_spectacles/` (champs : `titre`, `format`, `accroche`, `duree`, `jauge`,
 `public`, `ordre`, `excerpt`). Le corps Markdown est la page détaillée.
 
+## Ajouter un article de presse (« Iels parlent de nous »)
+
+Une entrée dans `_data/presse.yml` (champs : `titre`, `media`, `date`, `url` — lien vers
+l'article en ligne —, `image` — photo/scan de l'article utilisée si `url` est vide, à déposer
+dans `assets/images/presse/`). Triée par date décroissante automatiquement. L'accueil affiche les
+3 articles les plus récents (bouton « Voir plus d'articles »), la page `/iels-parlent-de-nous/`
+(accessible depuis le menu) affiche tous les articles.
+
 ## Référencement (priorité n°1)
 
 - `jekyll-seo-tag` (balises title/description/OG/Twitter/canonical), `jekyll-sitemap`, `jekyll-feed`.
@@ -101,6 +110,8 @@ Un fichier dans `_spectacles/` (champs : `titre`, `format`, `accroche`, `duree`,
 - **Formulaires** (contact + newsletter) : `action="#"` → brancher un service sans serveur
   (Formspree, Basin, HelloAsso, Brevo…).
 - **Réseaux** : URLs d'exemple dans `_config.yml > reseaux` (vide = pastille masquée).
+- **Presse** : entrées de démonstration dans `_data/presse.yml` → remplacer par les vraies
+  parutions (titre, média, date, lien ou photo de l'article).
 - **Équipe** : `_data/equipe.yml` — ajouter les photos (`photo:`) sinon une initiale dorée est
   générée. Sébastien et Alison figurent dans le PDF source ; Manon/Steeven/Clément aussi.
 - **Textes** : témoignages et bios sont des placeholders (le PDF source contenait du faux texte).

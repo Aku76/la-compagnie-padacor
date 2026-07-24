@@ -1,0 +1,23 @@
+{%- comment -%}
+  Carte d'un article de presse (« Iels parlent de nous »).
+  Paramètre : include.p = une entrée de site.data.presse.
+  Lien : `p.url` si renseigné, sinon `p.image` (photo/scan de l'article).
+{%- endcomment -%}
+{%- assign p = include.p -%}
+{%- assign externe = p.url and p.url != "" -%}
+{%- if externe -%}
+  {%- assign lien = p.url -%}
+{%- else -%}
+  {%- assign lien = p.image | relative_url -%}
+{%- endif -%}
+<a class="carte presse-carte" href="{{ lien }}"{% if externe %} target="_blank" rel="noopener"{% endif %}>
+  {%- if p.media -%}<span class="presse-carte__media">{{ p.media }}</span>{%- endif -%}
+  <h3 class="presse-carte__titre">{{ p.titre }}</h3>
+  {%- if p.date -%}
+    {%- assign moisnum = p.date | date: "%-m" | plus: 0 -%}
+    <p class="presse-carte__date">{{ p.date | date: "%-d" }} {{ site.data.mois.long[moisnum] }} {{ p.date | date: "%Y" }}</p>
+  {%- endif -%}
+  <span class="lien-fleche">Lire l'article
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </span>
+</a>

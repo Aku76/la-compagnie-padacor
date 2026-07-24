@@ -19,7 +19,7 @@ Le site est alors disponible sur <http://localhost:4000>.
 - **Ajouter une date** → un fichier dans `_evenements/` (voir `CLAUDE.md` pour les champs).
 - **Ajouter/modifier un spectacle** → un fichier dans `_spectacles/`.
 - **L'équipe** → `_data/equipe.yml`.
-- **Les avis** → `_data/temoignages.yml`.
+- **La presse (« Iels parlent de nous »)** → `_data/presse.yml`.
 - **Réseaux, e-mail, billetterie par défaut, domaine** → `_config.yml`.
 
 ## Documentation

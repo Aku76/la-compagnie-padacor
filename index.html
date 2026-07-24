@@ -7,6 +7,7 @@ description: "Compagnie de théâtre d'improvisation normande. Spectacles poéti
 {%- assign a_venir = site.evenements | where_exp: "e", "e.date >= site.time" | sort: "date" -%}
 {%- assign passes = site.evenements | where_exp: "e", "e.date < site.time" | sort: "date" | reverse -%}
 {%- assign formats = site.spectacles | sort: "ordre" -%}
+{%- assign presse = site.data.presse | sort: "date" | reverse -%}
 
 <!-- ============ HERO ============ -->
 <section class="hero" aria-labelledby="hero-titre">
@@ -107,21 +108,25 @@ description: "Compagnie de théâtre d'improvisation normande. Spectacles poéti
 
 <div class="feston" aria-hidden="true">{% include guirlande.html %}</div>
 
-<!-- ============ TÉMOIGNAGES (iels parlent de nous) ============ -->
-<section class="section" aria-labelledby="temoignages-titre">
+<!-- ============ PRESSE (iels parlent de nous) ============ -->
+<section class="section" aria-labelledby="presse-titre">
   <div class="contenu">
     <div class="entete-section">
       <span class="entete-section__eyebrow">Iels parlent de nous</span>
-      <h2 class="entete-section__titre" id="temoignages-titre">Des soirs qui laissent des traces</h2>
+      <h2 class="entete-section__titre" id="presse-titre">La presse en parle</h2>
     </div>
-    <div class="grille grille--3">
-      {%- for t in site.data.temoignages -%}
-      <figure class="carte temoignage" style="margin:0">
-        <blockquote class="temoignage__texte" style="margin:0">{{ t.texte }}</blockquote>
-        <figcaption class="temoignage__source">— {{ t.source }}</figcaption>
-      </figure>
-      {%- endfor -%}
-    </div>
+    {%- if presse.size > 0 -%}
+      <div class="grille grille--3">
+        {%- for p in presse limit: 3 -%}
+          {% include carte-presse.html p=p %}
+        {%- endfor -%}
+      </div>
+      <p style="margin-top:2rem">
+        <a class="lien-fleche" href="{{ '/iels-parlent-de-nous/' | relative_url }}">Voir plus d'articles
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </p>
+    {%- endif -%}
   </div>
 </section>
 

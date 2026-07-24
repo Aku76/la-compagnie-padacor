@@ -81,6 +81,7 @@ feed:
 nav:
   - { titre: "Agenda", url: "/agenda/" }
   - { titre: "Spectacles", url: "/spectacles/" }
+  - { titre: "Iels parlent de nous", url: "/iels-parlent-de-nous/" }
   - { titre: "La compagnie", url: "/la-compagnie/" }
   - { titre: "Contact", url: "/contact/" }
 
