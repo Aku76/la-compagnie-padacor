@@ -37,13 +37,18 @@ construit en **Jekyll** pour un hébergement **GitHub Pages**. Objectif n°1 : l
 _config.yml            Config, navigation (site.nav), réseaux, collections
 Gemfile                Dépendances (github-pages + plugins)
 index.html             Accueil (hero + agenda + spectacles + témoignages + équipe + newsletter)
-agenda.html            /agenda/  — liste à venir + passés, billetterie
-spectacles.html        /spectacles/ — catalogue des formats
-la-compagnie.md        /la-compagnie/ — histoire + démarche + équipe
-contact.html           /contact/ — formulaire (à brancher) + coordonnées
-mentions-legales.md    /mentions-legales/
 404.html               Page d'erreur
 robots.txt             SEO
+
+pages/                 Pages fixes (URL fixée par le permalink de chaque fichier,
+  agenda.html            /agenda/  — liste à venir + passés, billetterie
+  spectacles.html        /spectacles/ — catalogue des formats
+  la-compagnie.md        /la-compagnie/ — histoire + démarche + équipe
+  contact.html           /contact/ — formulaire (à brancher) + coordonnées
+  mentions-legales.md    /mentions-legales/
+  # NB : l'emplacement du fichier n'affecte PAS l'URL — c'est le champ
+  #      `permalink:` en tête de fichier qui la fixe. index.html et 404.html
+  #      doivent rester à la racine (contrainte Jekyll).
 
 _layouts/   default, page, spectacle, evenement
 _includes/  head, header, footer, guirlande, carte-evenement, reseaux, jsonld
