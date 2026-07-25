@@ -31,9 +31,22 @@ moment hors du temps.
 
 Padacor, ce sont des comédien·nes improvisateur·rices qui se font confiance les yeux fermés :
 
-{% for m in site.data.equipe %}
-- **{{ m.nom }}** — {{ m.role }}{% if m.mot %}. {{ m.mot }}{% endif %}
-{% endfor %}
+<div class="membres-liste">
+{%- for m in site.data.equipe -%}
+<div class="carte membre membre--liste">
+  {%- if m.photo and m.photo != "" -%}
+    <img class="membre__portrait" src="{{ m.photo | relative_url }}" alt="Portrait de {{ m.nom }}" loading="lazy" width="72" height="72">
+  {%- else -%}
+    <div class="membre__initiale" aria-hidden="true">{{ m.nom | slice: 0 }}</div>
+  {%- endif -%}
+  <div>
+    <p class="membre__nom">{{ m.nom }}</p>
+    <p class="membre__role">{{ m.role }}</p>
+    {%- if m.mot -%}<p class="membre__mot">{{ m.mot }}</p>{%- endif -%}
+  </div>
+</div>
+{%- endfor -%}
+</div>
 
 ## Nous inviter
 
