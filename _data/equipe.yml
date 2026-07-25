@@ -9,8 +9,8 @@
 
 - nom: "Steeven"
   role: "Comédien improvisateur"
-  mot: "Un sourire, une réplique, et le décor s'invente tout seul."
-  photo: ""
+  mot: "Un sourire, une réplique, et le décor s'invente tout seul. (photo test)"
+  photo: "https://static.wixstatic.com/media/97a196_4340adba400b4dc786753e02cfb0a142~mv2.jpeg"
 
 - nom: "Clément"
   role: "Comédien improvisateur"
