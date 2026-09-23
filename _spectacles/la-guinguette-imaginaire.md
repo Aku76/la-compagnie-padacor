@@ -1,5 +1,5 @@
 ---
-titre: "La Guinguette imaginaire"
+titre: "[Test] La Guinguette imaginaire"
 format: "Spectacle musical improvisé"
 accroche: "On rallume les guirlandes, un·e musicien·ne s'installe, et l'on improvise une guinguette qui n'a jamais existé."
 duree: "1h30"
