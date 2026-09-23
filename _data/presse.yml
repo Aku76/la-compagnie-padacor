@@ -11,20 +11,14 @@
 #
 # Entrées de démonstration à remplacer par les vraies parutions.
 
-- titre: "Un été à improviser : la Compagnie Padacor illumine les guinguettes normandes"
-  media: "Ouest-France"
+- titre: "[Test] Un été à improviser : la Compagnie Padacor illumine les guinguettes normandes"
+  media: "Test"
   date: 2026-06-02
-  url: "https://www.ouest-france.fr/"
+  url: "#"
   image: ""
 
-- titre: "Padacor, la troupe qui n'écrit jamais deux fois la même histoire"
-  media: "Actu.fr"
-  date: 2026-03-18
-  url: "https://actu.fr/"
-  image: ""
-
-- titre: "Portrait : une compagnie d'improvisation qui fait salle comble"
-  media: "France Bleu Normandie"
-  date: 2025-11-05
-  url: "https://www.francebleu.fr/"
+- titre: "Festival Off : ""Ces Petits Riens"", attention pépite ! Et si le hasard avait quelque chose à vous dire?"
+  media: "La Provence"
+  date: 2025-07-13
+  url: "https://www.laprovence.com/article/culture-loisirs/8043226584556614/festival-off-ces-petits-riens-attention-pepite-et-si-le-hasard-avait-quelque-chose-a-vous-dire"
   image: ""
