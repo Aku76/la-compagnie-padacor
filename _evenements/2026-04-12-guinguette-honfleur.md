@@ -1,5 +1,5 @@
 ---
-titre: "La Guinguette imaginaire"
+titre: "[Evenement Test] La Guinguette imaginaire"
 date: 2026-04-12 18:00:00 +0200
 lieu: "Grange aux Dîmes"
 ville: "Honfleur"
