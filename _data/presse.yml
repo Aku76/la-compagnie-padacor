@@ -11,16 +11,16 @@
 #
 # Entrées de démonstration à remplacer par les vraies parutions.
 
-- titre: "[Test] Un été à improviser : la Compagnie Padacor illumine les guinguettes normandes"
-  media: "Test"
-  date: 2026-06-02
-  url: "#"
+- titre: "Clermont-Ferrand : une soirée d'improvisation sur l'amour avec Es Spes et Padacor"
+  media: "La Montagne"
+  date: 2026-03-19
+  url: "https://www.lamontagne.fr/clermont-ferrand-63000/loisirs/clermont-ferrand-une-soiree-d-improvisation-sur-l-amour-avec-es-spes-et-padacor_14936905/"
   image: "/assets/image/presse_La_Montagne.jpeg"
 
 - titre: "[Test] Un été à improviser : la Compagnie Padacor illumine les guinguettes normandes"
   media: "Test"
   date: 2026-06-02
-  url: "#"
+  url: ""
   image: "/assets/images/Ali.jpg"
 
 - titre: "Festival Off : ""Ces Petits Riens"", attention pépite ! Et si le hasard avait quelque chose à vous dire?"
