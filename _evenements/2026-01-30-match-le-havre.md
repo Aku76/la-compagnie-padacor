@@ -1,6 +1,6 @@
 ---
 titre: "[Evenement Test] Match d'improvisation — Tournoi de printemps"
-date: 2026-05-30 20:30:00 +0200
+date: 2026-01-30 20:30:00 +0200
 lieu: "Le Tetris"
 ville: "Le Havre"
 spectacle: "Le Match d'improvisation"
