@@ -253,6 +253,9 @@
 .membre__nom { font-size: 1.2rem; margin-bottom: 0.1rem; }
 .membre__role { color: var(--or-clair); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; }
 .membre__mot { color: var(--brume); font-size: 0.95rem; margin-top: 0.5rem; }
+// Spécificité accrue pour l'emporter sur `.prose p` (page "La compagnie")
+.prose .membre__role { color: var(--or-clair); }
+.prose .membre__mot { color: var(--brume); }
 
 .membres-liste { display: flex; flex-direction: column; gap: 1rem; }
 .membre--liste {
