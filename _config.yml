@@ -31,8 +31,8 @@ reseaux:
   billetterie: "https://www.helloasso.com/"   # billetterie par défaut
 
 # --- Image de partage par défaut (Open Graph / réseaux) ---
-image: "/assets/images/logo.jpg"
-logo: "/assets/images/logo.jpg"
+image: "/assets/images/logo.png"
+logo: "/assets/images/logo.png"
 
 # --- Auteur (pour jekyll-seo-tag) ---
 author:
