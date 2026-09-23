@@ -15,14 +15,14 @@
 - nom: "Clément"
   role: "Comédien improvisateur"
   mot: "L'art de dire beaucoup avec trois fois rien."
-  photo: ""
+  photo: "/assets/images/Clement.jpg"
 
 - nom: "Manon"
   role: "Comédienne improvisatrice"
   mot: "La poésie qui se faufile entre deux éclats de rire."
-  photo: ""
+  photo: "/assets/images/Manon.jpg"
 
 - nom: "Sébastien"
   role: "Comédien improvisateur"
   mot: "Les silences les plus habités de la troupe."
-  photo: ""
+  photo: "/assets/images/Seb.jpg"
