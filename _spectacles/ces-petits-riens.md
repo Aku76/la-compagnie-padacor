@@ -1,5 +1,5 @@
 ---
-titre: "Ces petits riens"
+titre: "[Test] Ces petits riens"
 format: "Cabaret d'improvisation poétique"
 accroche: "Une soirée tissée de vos mots, où les plus petites choses deviennent les plus grandes histoires."
 duree: "1h15"
