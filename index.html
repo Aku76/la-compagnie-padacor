@@ -19,24 +19,29 @@ description: "Compagnie de théâtre d'improvisation normande. Spectacles poéti
     <span class="luciole" style="left:82%;top:34%;animation-delay:-3s"></span>
     <span class="luciole" style="left:90%;top:70%;animation-delay:-5s"></span>
   </div>
-  <div class="contenu">
-    <p class="hero__eyebrow">La Compagnie Padacor</p>
-    <h1 class="hero__titre" id="hero-titre">Le théâtre qui s'<em>invente</em> devant vous.</h1>
-    <p class="hero__intro">
-      Troupe d'improvisation normande. Le temps d'un soir, sous la guirlande, on écrit
-      ensemble une histoire qui n'existera qu'une fois — la vôtre.
-    </p>
-    <div class="hero__actions">
-      <a class="btn btn--or" href="{{ '/agenda/' | relative_url }}">
-        Voir l'agenda
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="btn btn--fantome" href="{{ '/spectacles/' | relative_url }}">Découvrir nos spectacles</a>
+  <div class="contenu hero__disposition">
+    <div class="hero__texte">
+      <p class="hero__eyebrow">La Compagnie Padacor</p>
+      <h1 class="hero__titre" id="hero-titre">Le théâtre qui s'<em>invente</em> devant vous.</h1>
+      <p class="hero__intro">
+        Troupe d'improvisation normande. Le temps d'un soir, sous la guirlande, on écrit
+        ensemble une histoire qui n'existera qu'une fois — la vôtre.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--or" href="{{ '/agenda/' | relative_url }}">
+          Voir l'agenda
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--fantome" href="{{ '/spectacles/' | relative_url }}">Découvrir nos spectacles</a>
+      </div>
+      <div class="hero__meta">
+        <span><b>·</b> Improvisation théâtrale</span>
+        <span><b>·</b> Normandie & alentours</span>
+        <span><b>·</b> Tout public, dès 6 ans</span>
+      </div>
     </div>
-    <div class="hero__meta">
-      <span><b>·</b> Improvisation théâtrale</span>
-      <span><b>·</b> Normandie & alentours</span>
-      <span><b>·</b> Tout public, dès 6 ans</span>
+    <div class="hero__vignette" aria-hidden="true">
+      <img class="hero__logo" src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="" width="280" height="280">
     </div>
   </div>
 </section>

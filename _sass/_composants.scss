@@ -60,6 +60,27 @@
   padding-block: clamp(5rem, 12vh, 9rem) clamp(3rem, 8vh, 6rem);
   overflow: hidden;
 }
+.hero__disposition {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+.hero__texte { flex: 1 1 auto; min-width: 0; }
+.hero__vignette { flex: 0 0 auto; }
+.hero__logo {
+  width: clamp(140px, 18vw, 260px);
+  height: clamp(140px, 18vw, 260px);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--lueur-or);
+}
+@media (max-width: 860px) {
+  .hero__disposition { flex-direction: column-reverse; text-align: center; }
+  .hero__meta { justify-content: center; }
+  .hero__actions { justify-content: center; }
+  .hero__intro { margin-inline: auto; }
+}
 .hero__eyebrow {
   font-family: var(--script);
   color: var(--or-clair);
