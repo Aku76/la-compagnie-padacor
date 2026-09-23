@@ -1,11 +1,11 @@
-_# L'équipe de la Compagnie Padacor.
+# L'équipe de la Compagnie Padacor.
 # Écriture inclusive : le champ « role » se veut épicène.
 # photo : chemin vers un portrait (laisser vide → initiale dorée générée).
 
 - nom: "Alison"
   role: "Metteuse en scène"
   mot: "Celle qui tient les fils de la guirlande et laisse la lumière trouver chacun·e."
-  photo: "/assets/images/Ali.jpg"
+  photo: ""
 
 - nom: "Steeven"
   role: "Comédien improvisateur"
