@@ -15,15 +15,9 @@
   media: "La Montagne"
   date: 2026-03-19
   url: "https://www.lamontagne.fr/clermont-ferrand-63000/loisirs/clermont-ferrand-une-soiree-d-improvisation-sur-l-amour-avec-es-spes-et-padacor_14936905/"
-  image: "/assets/image/presse_La_Montagne.jpeg"
+  image: ""
 
-- titre: "[Test] Un été à improviser : la Compagnie Padacor illumine les guinguettes normandes"
-  media: "Test"
-  date: 2026-06-02
-  url: ""
-  image: "/assets/images/Ali.jpg"
-
-- titre: "Festival Off : Ces Petits Riens, attention pépite ! Et si le hasard avait quelque chose à vous dire?"
+- titre: "Festival Off : \"Ces Petits Riens\", attention pépite ! Et si le hasard avait quelque chose à vous dire?"
   media: "La Provence"
   date: 2025-07-13
   url: "https://www.laprovence.com/article/culture-loisirs/8043226584556614/festival-off-ces-petits-riens-attention-pepite-et-si-le-hasard-avait-quelque-chose-a-vous-dire"
