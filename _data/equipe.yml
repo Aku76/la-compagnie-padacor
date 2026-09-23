@@ -2,20 +2,20 @@
 # Écriture inclusive : le champ « role » se veut épicène.
 # photo : chemin vers un portrait (laisser vide → initiale dorée générée).
 
-- nom: "Alison"
-  role: "Metteuse en scène"
-  mot: "Celle qui tient les fils de la guirlande et laisse la lumière trouver chacun·e."
-  photo: "/assets/images/Ali.jpg"
+- nom: "Clément"
+  role: "Comédien improvisateur"
+  mot: "L'art de dire beaucoup avec trois fois rien."
+  photo: "/assets/images/Clement.jpg"
 
 - nom: "Steeven"
   role: "Comédien improvisateur"
   mot: "Un sourire, une réplique, et le décor s'invente tout seul. (photo test)"
   photo: "/assets/images/Steeven.jpg"
 
-- nom: "Clément"
-  role: "Comédien improvisateur"
-  mot: "L'art de dire beaucoup avec trois fois rien."
-  photo: "/assets/images/Clement.jpg"
+- nom: "Alison"
+  role: "Metteuse en scène"
+  mot: "Celle qui tient les fils de la guirlande et laisse la lumière trouver chacun·e."
+  photo: "/assets/images/Ali.jpg"
 
 - nom: "Manon"
   role: "Comédienne improvisatrice"
