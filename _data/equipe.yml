@@ -1,4 +1,4 @@
-# L'équipe de la Compagnie Padacor.
+_# L'équipe de la Compagnie Padacor.
 # Écriture inclusive : le champ « role » se veut épicène.
 # photo : chemin vers un portrait (laisser vide → initiale dorée générée).
 
@@ -10,7 +10,7 @@
 - nom: "Steeven"
   role: "Comédien improvisateur"
   mot: "Un sourire, une réplique, et le décor s'invente tout seul. (photo test)"
-  photo: "/assets/images/Steeven.jpg"
+  photo: "/assets/images/equipe_Steeven.jpg"
 
 - nom: "Clément"
   role: "Comédien improvisateur"
