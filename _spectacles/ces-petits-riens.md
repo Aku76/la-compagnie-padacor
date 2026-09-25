@@ -13,6 +13,7 @@ excerpt: "Un spectacle d'improvisation qui raconte l'origine des grands moments 
 “Ces Petits Riens”, c’est un spectacle unique de théâtre d’improvisation où, à chaque spectacle, nous prouvons scientifiquement (ou presque) qu’un geste anodin peut bouleverser le monde entier. Mais attention : chaque représentation est différente, car c’est vous, le public, qui nous donnez deux ingrédients essentiels :
 - une action banale de votre quotidien
 - un événement marquant de votre vie
+
 À partir de là, nous tissons en direct le fil invisible qui relie ces deux moments. Nous "démontrons", jouons sur scène, comment cette première action banale a impacté par effet domino, effet papillon, des vies les unes après les autres, que l'on voit défiler sur scène par un lien de cause à effet évident ! Pour finir en beauté sur l'évènement marquant de votre vie. 
 A la fin du spectacle c'est évident, sans cette première action semble toute banale, vous n'auriez pas fait ce voyage qui vous a tant chamboulé, vous n'auriez jamais quitté ce premier job ou pire vous ne l'auriez pas rencontré !
 
