@@ -1,7 +1,7 @@
 ---
 titre: "Ces petits riens"
 format: "Cabaret d'improvisation poétique"
-accroche: "Tous les évènements de l'univers sont connectés et nous le \"prouvons\" sur scène"
+accroche: "Tous les évènements de l'univers sont connectés et nous le prouvons sur scène !"
 duree: "1h15"
 jauge: "de 20 à 2000 personnes"
 public: "Tout public"
