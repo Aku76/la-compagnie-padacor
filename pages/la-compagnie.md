@@ -10,8 +10,8 @@ description: "L'histoire de la Compagnie Padacor, troupe d'improvisation normand
 ## Notre histoire
 
 La Compagnie Padacor est née d'une bande d'ami·es qui n'avaient qu'une idée en tête : monter
-sur scène sans savoir ce qui allait s'y passer. De fil en aiguille — et de guirlande en
-guirlande — le jeu est devenu une troupe, et la troupe est devenue une compagnie.
+sur scène sans savoir ce qui allait s'y passer. De fil en aiguille, et de guirlande en
+guirlande, le jeu est devenu une troupe, et la troupe est devenue une compagnie.
 
 Depuis, on sillonne la Normandie pour offrir un théâtre **vivant, généreux et poétique**, où le
 public n'est jamais spectateur passif : c'est lui qui souffle les mots, les lieux, les
