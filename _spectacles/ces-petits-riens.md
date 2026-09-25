@@ -12,7 +12,7 @@ excerpt: "Un cabaret d'improvisation poétique où vos suggestions deviennent de
 
 Sous la guirlande, cinq comédien·nes attendent une seule chose : **un mot de vous**.
 Un objet oublié, un souvenir d'enfance, une couleur, un prénom. À partir de ce presque
-rien, la troupe fait naître une scène, une chanson, une émotion — puis la laisse s'envoler.
+rien, la troupe fait naître une scène, une chanson, une émotion, puis la laisse s'envoler.
 
 **Ces petits riens**, c'est notre spectacle-signature : intime, drôle et souvent bouleversant.
 Aucun soir ne ressemble au précédent, parce que c'est vous qui écrivez, sans le savoir, le
