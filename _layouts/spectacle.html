@@ -9,17 +9,22 @@ layout: default
       <span>{{ page.titre }}</span>
     </nav>
 
-    <header class="page-entete" style="padding-top:0">
-      {%- if page.format -%}<span class="spectacle-carte__format">{{ page.format }}</span>{%- endif -%}
-      <h1 class="page-entete__titre">{{ page.titre }}</h1>
-      {%- if page.accroche -%}<p class="page-entete__intro">{{ page.accroche }}</p>{%- endif -%}
+    <header class="page-entete spectacle-entete" style="padding-top:0">
+      <div class="spectacle-entete__texte">
+        {%- if page.format -%}<span class="spectacle-carte__format">{{ page.format }}</span>{%- endif -%}
+        <h1 class="page-entete__titre">{{ page.titre }}</h1>
+        {%- if page.accroche -%}<p class="page-entete__intro">{{ page.accroche }}</p>{%- endif -%}
 
-      {%- if page.duree or page.jauge or page.public -%}
-      <div class="spectacle-carte__meta" style="margin-top:1.5rem">
-        {%- if page.duree -%}<span class="puce">⏱ {{ page.duree }}</span>{%- endif -%}
-        {%- if page.jauge -%}<span class="puce">👥 {{ page.jauge }}</span>{%- endif -%}
-        {%- if page.public -%}<span class="puce">🎭 {{ page.public }}</span>{%- endif -%}
+        {%- if page.duree or page.jauge or page.public -%}
+        <div class="spectacle-carte__meta" style="margin-top:1.5rem">
+          {%- if page.duree -%}<span class="puce">⏱ {{ page.duree }}</span>{%- endif -%}
+          {%- if page.jauge -%}<span class="puce">👥 {{ page.jauge }}</span>{%- endif -%}
+          {%- if page.public -%}<span class="puce">🎭 {{ page.public }}</span>{%- endif -%}
+        </div>
+        {%- endif -%}
       </div>
+      {%- if page.image -%}
+      <img class="spectacle-entete__image" src="{{ page.image | relative_url }}" alt="{{ page.titre }}">
       {%- endif -%}
     </header>
 

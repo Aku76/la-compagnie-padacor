@@ -37,6 +37,28 @@
 .page-entete__titre { font-size: var(--t-h1); max-width: 18ch; }
 .page-entete__intro { color: var(--brume); font-size: var(--t-lead); max-width: 52ch; margin-top: 1rem; }
 
+// En-tête d'une page spectacle : titre à gauche, affiche à droite
+.spectacle-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+.spectacle-entete__texte { flex: 1 1 auto; min-width: 0; }
+.spectacle-entete__image {
+  flex: 0 0 auto;
+  width: clamp(140px, 22vw, 260px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--rayon-lg);
+  border: 1px solid var(--bordure);
+  box-shadow: var(--ombre-douce);
+}
+@media (max-width: 760px) {
+  .spectacle-entete { flex-direction: column-reverse; text-align: center; }
+  .spectacle-entete__image { width: clamp(160px, 46vw, 220px); }
+}
+
 .fil-ariane { color: var(--brume-basse); font-size: 0.85rem; margin-bottom: 1.5rem; }
 .fil-ariane a { color: var(--brume); }
 .fil-ariane a:hover { color: var(--or-clair); }
