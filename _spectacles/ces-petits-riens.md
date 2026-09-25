@@ -20,7 +20,7 @@ Tous les évènements de l'univers sont connectés ! Nous sommes là pour le pro
 Nous "démontrons", jouons sur scène, comment cette première action banale a impacté par effet domino, effet papillon, des vies les unes après les autres, que l'on voit défiler sur scène par un lien de cause à effet évident ! Pour finir en beauté sur l'évènement marquant de votre vie. 
 A la fin du spectacle c'est évident, sans cette première action semble toute banale, vous n'auriez pas fait ce voyage qui vous a tant chamboulé, vous n'auriez jamais quitté ce premier job ou pire vous ne l'auriez pas rencontré !
 
-Vous ne nous croyez pas ? Venez tester notre théorème avec vos moments mémorables dans le spectacle Ces Petits Riens et ressorter avec l'effet papillon dans votre ventre !
+Vous ne nous croyez pas ? Venez tester notre théorème avec vos moments mémorables dans le spectacle Ces Petits Riens et ressortez avec l'effet papillon dans votre ventre !
 
 **Ces petits riens**, a été co-créé par Steeven Cauchois avec Emma Daoud et Ivan Seisen pour le festival Off d'Avignon 2025 qui a fait un carton et chacun·e est reparti avec dans leur valise. C'est ainsi qu'il arrive à Rouen avec Steeven dans La Compagnie Padacor 
 
