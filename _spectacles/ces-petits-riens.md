@@ -1,7 +1,7 @@
 ---
 titre: "Ces petits riens"
 format: "Cabaret d'improvisation poétique"
-accroche: "Tous les évènements de l'univers sont connectés et nous le prouvons sur scène !"
+accroche: "Tous les évènements de l'univers sont connectés ! Nous sommes là pour le prouver, vous êtes là pour nous tester !"
 duree: "1h15"
 jauge: "de 20 à 2000 personnes"
 public: "Tout public"
@@ -10,7 +10,7 @@ image: "/assets/images/spectacles/affiche-ces-petits-rien.jpg"
 excerpt: "Un spectacle d'improvisation qui raconte l'origine des grands moments de votre vie"
 ---
 
-“Ces Petits Riens”, c’est un spectacle unique de théâtre d’improvisation où chaque matin, nous prouvons scientifiquement (ou presque) qu’un geste anodin peut bouleverser le monde entier. Mais attention : chaque représentation est différente, car c’est vous, le public, qui nous donnez deux ingrédients essentiels :
+“Ces Petits Riens”, c’est un spectacle unique de théâtre d’improvisation où, à chaque spectacle, nous prouvons scientifiquement (ou presque) qu’un geste anodin peut bouleverser le monde entier. Mais attention : chaque représentation est différente, car c’est vous, le public, qui nous donnez deux ingrédients essentiels :
 - une action banale de votre quotidien
 - un événement marquant de votre vie
 À partir de là, nous tissons en direct le fil invisible qui relie ces deux moments. Nous "démontrons", jouons sur scène, comment cette première action banale a impacté par effet domino, effet papillon, des vies les unes après les autres, que l'on voit défiler sur scène par un lien de cause à effet évident ! Pour finir en beauté sur l'évènement marquant de votre vie. 
