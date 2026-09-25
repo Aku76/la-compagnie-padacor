@@ -48,8 +48,8 @@
 .spectacle-entete__image {
   flex: 0 0 auto;
   width: clamp(140px, 22vw, 260px);
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  max-height: clamp(140px, 22vw, 260px);
+  object-fit: contain;
   border-radius: var(--rayon-lg);
   border: 1px solid var(--bordure);
   box-shadow: var(--ombre-douce);
