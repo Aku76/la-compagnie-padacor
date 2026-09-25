@@ -1,5 +1,5 @@
 ---
-titre: "[Evenement Test] La Guinguette imaginaire — Soirée d'été"
+titre: "[Evenement Test] La Guinguette imaginaire - Soirée d'été"
 date: 2026-01-14 20:30:00 +0200
 lieu: "Jardins du Casino"
 ville: "Cabourg"
