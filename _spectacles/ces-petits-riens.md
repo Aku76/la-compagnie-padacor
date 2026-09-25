@@ -12,7 +12,7 @@ excerpt: "Un spectacle d'improvisation qui raconte l'origine des grands moments 
 
 Tous les évènements de l'univers sont connectés ! Nous sommes là pour le prouver, vous êtes là pour nous tester !
 
-“Ces Petits Riens”, c’est un spectacle unique de théâtre d’improvisation où, à chaque spectacle, nous prouvons scientifiquement (ou presque) qu’un geste anodin peut bouleverser le monde entier. Mais attention : chaque représentation est différente, car c’est vous, le public, qui nous donnez deux ingrédients essentiels :
+**Ces Petits Riens**, c’est un spectacle unique de théâtre d’improvisation où, à chaque spectacle, nous prouvons scientifiquement (ou presque) qu’un geste anodin peut bouleverser le monde entier. Mais attention : chaque représentation est différente, car c’est vous, le public, qui nous donnez deux ingrédients essentiels :
 - une action banale du quotidien
 - un événement marquant de votre vie
 
