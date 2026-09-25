@@ -1,20 +1,26 @@
 ---
-titre: "[Test] Ces petits riens"
+titre: "Ces petits riens"
 format: "Cabaret d'improvisation poétique"
-accroche: "Une soirée tissée de vos mots, où les plus petites choses deviennent les plus grandes histoires."
+accroche: "Tous les évènements de l'univers sont connectés et nous le \"prouvons\" sur scène"
 duree: "1h15"
-jauge: "de 20 à 200 personnes"
-public: "Tout public, dès 8 ans"
+jauge: "de 20 à 2000 personnes"
+public: "Tout public"
 ordre: 1
-image: "/assets/images/logo.jpg"
-excerpt: "Un cabaret d'improvisation poétique où vos suggestions deviennent des histoires."
+image: "/assets/images/spectacles/affiche-ces-petits-rien.jpg"
+excerpt: "Un spectacle d'improvisation qui raconte l'origine des grands moments de votre vie"
 ---
 
-Sous la guirlande, cinq comédien·nes attendent une seule chose : **un mot de vous**.
-Un objet oublié, un souvenir d'enfance, une couleur, un prénom. À partir de ce presque
-rien, la troupe fait naître une scène, une chanson, une émotion, puis la laisse s'envoler.
+“Ces Petits Riens”, c’est un spectacle unique de théâtre d’improvisation où chaque matin, nous prouvons scientifiquement (ou presque) qu’un geste anodin peut bouleverser le monde entier. Mais attention : chaque représentation est différente, car c’est vous, le public, qui nous donnez deux ingrédients essentiels :
+- une action banale de votre quotidien
+- un événement marquant de votre vie
+À partir de là, nous tissons en direct le fil invisible qui relie ces deux moments. Nous "démontrons", jouons sur scène, comment cette première action banale a impacté par effet domino, effet papillon, des vies les unes après les autres, que l'on voit défiler sur scène par un lien de cause à effet évident ! Pour finir en beauté sur l'évènement marquant de votre vie. 
+A la fin du spectacle c'est évident, sans cette première action semble toute banale, vous n'auriez pas fait ce voyage qui vous a tant chamboulé, vous n'auriez jamais quitté ce premier job ou pire vous ne l'auriez pas rencontré !
 
-**Ces petits riens**, c'est notre spectacle-signature : intime, drôle et souvent bouleversant.
+Vous ne nous croyez pas ? Venez tester notre théorème avec vos moments mémorables dans le spectacle Ces Petits Riens !
+
+**Ces petits riens**, a été co-créé par Steeven Cauchois avec Emma Daoud et Ivan Seisen pour le festival Off d'Avignon 2025 qui a fait un carton et chacun·e est reparti avec dans leur valise. C'est ainsi qu'il arrive à Rouen avec Steeven dans La Compagnie Padacor 
+
+C'est notre premier spectacle : intime, drôle et souvent bouleversant.
 Aucun soir ne ressemble au précédent, parce que c'est vous qui écrivez, sans le savoir, le
 programme de la soirée.
 
@@ -23,9 +29,3 @@ programme de la soirée.
 Pour les familles, les curieux·ses, les amoureux·ses du théâtre comme celles et ceux qui n'y
 vont jamais. On rit beaucoup, on est ému·e parfois, on repart avec l'impression d'avoir
 partagé quelque chose d'unique.
-
-## Fiche technique
-
-- Format modulable : de la petite salle à la scène de festival
-- Cinq comédien·nes improvisateur·rices + une régie lumière & son
-- Autonomie technique possible pour les lieux non équipés
