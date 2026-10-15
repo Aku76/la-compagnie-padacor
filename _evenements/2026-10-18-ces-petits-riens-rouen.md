@@ -1,11 +1,11 @@
 ---
-titre: "[Test] Ces petits riens"
+titre: "Ces Petits Riens"
 date: 2026-10-18 17:00:00 +0200
-lieu: "Le Théâtre Inventé"
+lieu: "Le 3 Pièces Muzik'Club"
 ville: "Rouen"
-spectacle: "Ces petits riens"
-prix: "14 € / 9 € réduit"
-billetterie: "https://www.helloasso.com/"
+spectacle: "Ces Petits Riens"
+prix: "5€"
+billetterie: "https://www.helloasso.com/associations/la-compagnie-padacor/evenements/ces-petits-riens-3-pieces-oct-2026"
 complet: false
 photo: ""
 excerpt: "Toute les actions de l'univers sont liées entre elles, nous le prouvons (presque) scientifiquement ! "
