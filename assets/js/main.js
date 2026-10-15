@@ -101,7 +101,7 @@
     });
 
     document.addEventListener("keydown", function (evenement) {
-      if (evenement.key !== "Escape") return;
+      if (evenement.key !== "Escape" || document.body.classList.contains("lightbox-ouverte")) return;
       document.querySelectorAll(".popup-evenement").forEach(function (popup) {
         if (!popup.hidden) fermerPopupEvenement(popup);
       });

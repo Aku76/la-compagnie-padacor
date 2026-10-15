@@ -57,16 +57,22 @@
     <button class="popup-evenement__fermer" type="button" data-popup-fermer aria-label="Fermer">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    {%- if e.photo and e.photo != "" -%}
-      <img class="popup-evenement__photo" src="{{ e.photo | relative_url }}" alt="" loading="lazy">
-    {%- endif -%}
     <div class="popup-evenement__corps">
+      <div class="popup-evenement__entete">
+      <div class="popup-evenement__entete-texte">
       <p class="popup-evenement__eyebrow">{{ jour }} {{ site.data.mois.long[moisnum] }} {{ annee }}{% if heure != "00:00" %} · {{ heure }}{% endif %}</p>
       <h2 class="popup-evenement__titre" id="{{ id_popup }}-titre">{{ e.titre }}</h2>
       <p class="popup-evenement__lieu">
         <span>📍 {{ e.lieu }}{% if e.ville %}, {{ e.ville }}{% endif %}</span>
         {%- if e.prix and e.prix != "" %}<span>🎟 {{ e.prix }}</span>{% endif -%}
       </p>
+      </div>
+      {%- if e.photo and e.photo != "" -%}
+        <button type="button" class="popup-evenement__logo" data-lightbox-ouvrir="{{ id_popup }}-photo" aria-label="Agrandir l'affiche : {{ e.titre | escape }}">
+          <img src="{{ e.photo | relative_url }}" alt="" loading="lazy">
+        </button>
+      {%- endif -%}
+      </div>
       {%- if e.content and e.content != "" -%}
         <div class="prose popup-evenement__texte">{{ e.content }}</div>
       {%- endif -%}
@@ -89,3 +95,12 @@
     </div>
   </div>
 </div>
+{%- if e.photo and e.photo != "" %}
+<div class="lightbox" id="{{ id_popup }}-photo" hidden>
+  <div class="lightbox__fond" data-lightbox-fermer></div>
+  <button class="popup-evenement__fermer" type="button" data-lightbox-fermer aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img class="lightbox__image" src="{{ e.photo | relative_url }}" alt="{{ e.titre | escape }}" loading="lazy">
+</div>
+{%- endif %}
