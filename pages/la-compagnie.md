@@ -9,7 +9,7 @@ description: "L'histoire de la Compagnie Padacor, troupe d'improvisation normand
 
 ## Notre histoire
 
-La Compagnie Padacor est née d'une bande d'ami·es qui n'avaient qu'une idée en tête : monter
+La Compagnie Padacor est née d'une bande d'ami·es qui s'est rencontrée au Steac Frit et n'avaient qu'une idée en tête : monter
 sur scène sans savoir ce qui allait s'y passer. De fil en aiguille, et de guirlande en
 guirlande, le jeu est devenu une troupe, et la troupe est devenue une compagnie.
 
@@ -29,7 +29,7 @@ moment hors du temps.
 
 ## L'équipe
 
-Padacor, ce sont des comédien·nes improvisateur·rices qui se font confiance les yeux fermés :
+La Compagnie Padacor, ce sont des comédien·nes improvisateur·rices qui se font confiance les yeux fermés :
 
 <div class="membres-liste">
 {%- for m in site.data.equipe -%}
