@@ -514,3 +514,38 @@ body.popup-evenement-ouverte { overflow: hidden; }
   .evenement-entete--photo { flex-direction: column; }
   .evenement-entete__photo { max-width: 100%; flex-basis: auto; }
 }
+
+.evenement-entete__photo-btn {
+  flex: 0 1 min(40%, 380px);
+  max-width: 40%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  line-height: 0;
+}
+.evenement-entete__photo-btn .evenement-entete__photo { max-width: 100%; flex: none; display: block; }
+@media (max-width: 700px) {
+  .evenement-entete__photo-btn { max-width: 100%; flex-basis: auto; }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gouttiere);
+}
+.lightbox[hidden] { display: none; }
+.lightbox__fond { position: absolute; inset: 0; background: rgba(12, 10, 8, 0.92); }
+.lightbox__image {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.lightbox .popup-evenement__fermer { z-index: 1; }
+body.lightbox-ouverte { overflow: hidden; }

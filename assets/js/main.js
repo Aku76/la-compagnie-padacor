@@ -107,4 +107,25 @@
       });
     });
   }
+
+  // Lightbox : agrandit une image au clic (page détail d'un événement)
+  document.querySelectorAll("[data-lightbox-ouvrir]").forEach(function (declencheur) {
+    var boite = document.getElementById(declencheur.getAttribute("data-lightbox-ouvrir"));
+    if (!boite) return;
+    var fermer = function () {
+      boite.hidden = true;
+      document.body.classList.remove("lightbox-ouverte");
+      declencheur.focus();
+    };
+    declencheur.addEventListener("click", function () {
+      boite.hidden = false;
+      document.body.classList.add("lightbox-ouverte");
+    });
+    boite.querySelectorAll("[data-lightbox-fermer]").forEach(function (b) {
+      b.addEventListener("click", fermer);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !boite.hidden) fermer();
+    });
+  });
 })();

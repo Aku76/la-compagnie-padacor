@@ -22,7 +22,9 @@ layout: default
       </p>
     </header>
       {%- if page.photo and page.photo != "" %}
-      <img class="evenement-entete__photo" src="{{ page.photo | relative_url }}" alt="{{ page.titre }}" loading="lazy">
+      <button type="button" class="evenement-entete__photo-btn" data-lightbox-ouvrir="photo-agrandie" aria-label="Agrandir l'affiche : {{ page.titre }}">
+        <img class="evenement-entete__photo" src="{{ page.photo | relative_url }}" alt="{{ page.titre }}" loading="lazy">
+      </button>
       {%- endif %}
     </div>
 
@@ -44,3 +46,12 @@ layout: default
     </p>
   </div>
 </article>
+{%- if page.photo and page.photo != "" %}
+<div class="lightbox" id="photo-agrandie" hidden>
+  <div class="lightbox__fond" data-lightbox-fermer></div>
+  <button class="popup-evenement__fermer" type="button" data-lightbox-fermer aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img class="lightbox__image" src="{{ page.photo | relative_url }}" alt="{{ page.titre }}">
+</div>
+{%- endif %}
