@@ -7,7 +7,7 @@ spectacle: "Ces Petits Riens"
 prix: "5€"
 billetterie: "https://www.helloasso.com/associations/la-compagnie-padacor/evenements/ces-petits-riens-3-pieces-oct-2026"
 complet: false
-photo: ""
+photo: "/assets/images/spectacles/affiche-ces-petits-rien.jpg"
 excerpt: "Toute les actions de l'univers sont liées entre elles, nous le prouvons (presque) scientifiquement ! "
 ---
 
