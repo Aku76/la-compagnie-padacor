@@ -22,7 +22,7 @@ A la fin du spectacle c'est évident, sans cette première action semble toute b
 
 Vous ne nous croyez pas ? Venez tester notre théorème avec vos moments mémorables dans le spectacle Ces Petits Riens et ressortez avec l'effet papillon dans votre ventre !
 
-**Ces petits riens**, a été co-créé par Steeven Cauchois avec Emma Daoud et Ivan Seisen pour le festival Off d'Avignon 2025 qui a fait un carton et chacun·e est reparti avec dans leur valise. C'est ainsi qu'il arrive à Rouen avec Steeven dans La Compagnie Padacor 
+**Ces petits riens**, a été co-créé par Steeven Cauchois, Emma Daoud et Ivan Seisen pour le festival Off d'Avignon 2025 qui a fait un carton et chacun·e est reparti avec dans leur valise. C'est ainsi qu'il arrive à Rouen avec Steeven dans La Compagnie Padacor 
 
 C'est notre premier spectacle : intime, drôle et souvent bouleversant.
 Aucun soir ne ressemble au précédent, parce que c'est vous qui écrivez, sans le savoir, le
@@ -31,5 +31,5 @@ programme de la soirée.
 ## Pour qui ?
 
 Pour les familles, les curieux·ses, les amoureux·ses du théâtre comme celles et ceux qui n'y
-vont jamais. On rit beaucoup, on est ému·e parfois, on repart avec l'impression d'avoir
-partagé quelque chose d'unique.
+vont jamais. On rit beaucoup, on est ému·e parfois et on repart en ayant
+vécu ensemble une histoire unique à cette soirée.
