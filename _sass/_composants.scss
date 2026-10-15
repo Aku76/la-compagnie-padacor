@@ -493,3 +493,24 @@ body.popup-chantier-ouverte { overflow: hidden; }
 .popup-evenement__action { margin-top: 1.8rem; }
 
 body.popup-evenement-ouverte { overflow: hidden; }
+
+/* Page détail d'un événement : photo à droite du titre, sans rognage */
+.evenement-entete--photo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(1.2rem, 4vw, 2.5rem);
+}
+.evenement-entete--photo .evenement-entete__texte { flex: 1 1 0; min-width: 0; }
+.evenement-entete__photo {
+  flex: 0 1 min(40%, 380px);
+  max-width: 40%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+@media (max-width: 700px) {
+  .evenement-entete--photo { flex-direction: column; }
+  .evenement-entete__photo { max-width: 100%; flex-basis: auto; }
+}

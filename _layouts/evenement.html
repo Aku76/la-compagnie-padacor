@@ -13,13 +13,18 @@ layout: default
       <span>{{ page.titre }}</span>
     </nav>
 
-    <header class="page-entete" style="padding-top:0">
+    <div class="evenement-entete{% if page.photo and page.photo != "" %} evenement-entete--photo{% endif %}">
+    <header class="page-entete evenement-entete__texte" style="padding-top:0">
       <span class="page-entete__eyebrow">{{ jour }} {{ site.data.mois.long[moisnum] }} {{ annee }}</span>
       <h1 class="page-entete__titre">{{ page.titre }}</h1>
       <p class="page-entete__intro">
         📍 {{ page.lieu }}{% if page.ville %}, {{ page.ville }}{% endif %}{% if heure != "00:00" %} · 🕗 {{ heure }}{% endif %}
       </p>
     </header>
+      {%- if page.photo and page.photo != "" %}
+      <img class="evenement-entete__photo" src="{{ page.photo | relative_url }}" alt="{{ page.titre }}" loading="lazy">
+      {%- endif %}
+    </div>
 
     <div class="prose">
       {{ content }}
