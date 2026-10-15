@@ -1,6 +1,6 @@
 ---
 titre: "Ces Petits Riens"
-date: 2026-10-18 17:00:00 +0200
+date: 2026-10-28 20:30:00 +0200
 lieu: "Le 3 Pièces Muzik'Club"
 ville: "Rouen"
 spectacle: "Ces Petits Riens"
