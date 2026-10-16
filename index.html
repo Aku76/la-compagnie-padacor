@@ -184,15 +184,12 @@ description: "Compagnie de théâtre d'improvisation normande. Spectacles poéti
         <h2 class="entete-section__titre" id="newsletter-titre">La lettre des guirlandes</h2>
         <p class="entete-section__intro">Quelques mots, quelques dates, jamais plus d'une fois par mois. On vous prévient dès qu'une nouvelle soirée s'allume.</p>
       </div>
-      {%- comment -%}
-        Formulaire prêt à brancher sur un service (Mailchimp, Brevo, HelloAsso…).
-        Remplacer l'attribut action par l'URL du service choisi.
-      {%- endcomment -%}
-      <form class="formulaire" action="#" method="post" aria-label="Inscription à la newsletter">
+      <form class="formulaire" id="nl-form" action="https://hook.eu1.make.com/jhr86i7x86isep4wpxrqui042g5bj7dh" method="post" data-apikey="927d0bd0cc53b441a4a98da5a126e417ebe0f9fc80f5b2f79f1615d82e28068e7dae5e5ded402000999a8572795b3bd9806bc9cedd802473e6969ad063191144" aria-label="Inscription à la newsletter">
         <label class="visuellement-cache" for="nl-email">Votre adresse e-mail</label>
         <input class="champ" id="nl-email" type="email" name="email" placeholder="votre@email.fr" required autocomplete="email">
         <button class="btn btn--or" type="submit">Je m'inscris</button>
       </form>
+      <p id="nl-statut" role="status" aria-live="polite" style="color:var(--or);font-size:0.9rem;margin-top:0.7rem"></p>
       <p style="color:var(--brume-basse);font-size:0.82rem;margin-top:0.9rem">
         En vous inscrivant, vous acceptez de recevoir nos actualités. Désinscription possible à tout moment.
       </p>

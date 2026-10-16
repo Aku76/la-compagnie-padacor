@@ -116,7 +116,8 @@ dans `assets/images/presse/`). Triée par date décroissante automatiquement. L'
 - **Photos des événements** : champ `photo:` vide dans tous les fichiers `_evenements/` → déposer
   une image par événement (ex. dans `assets/images/evenements/`) pour qu'elle apparaisse dans la
   pop-up de détails.
-- **Formulaires** (contact + newsletter) : `action="#"` → brancher un service sans serveur
+- **Newsletter** : branchée sur un webhook Make (voir `index.html` + `assets/js/main.js`).
+- **Formulaire contact** : `action="#"` → brancher un service sans serveur
   (Formspree, Basin, HelloAsso, Brevo…).
 - **Réseaux** : URLs d'exemple dans `_config.yml > reseaux` (vide = pastille masquée).
 - **Presse** : entrées de démonstration dans `_data/presse.yml` → remplacer par les vraies

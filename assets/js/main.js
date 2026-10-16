@@ -129,3 +129,28 @@
     });
   });
 })();
+
+/* Newsletter : envoi de l'adresse vers le webhook Make */
+(function () {
+  var form = document.getElementById('nl-form');
+  if (!form) return;
+  var statut = document.getElementById('nl-statut');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bouton = form.querySelector('button[type="submit"]');
+    var email = form.elements.email.value;
+    bouton.disabled = true;
+    statut.textContent = '';
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-make-apikey': form.dataset.apikey },
+      body: JSON.stringify({ email: email, source: 'site-padacor', date: new Date().toISOString() })
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      form.reset();
+      statut.textContent = 'Merci ! Votre inscription est bien prise en compte.';
+    }).catch(function () {
+      statut.textContent = "Oups, l'inscription n'a pas fonctionné. Réessayez ou écrivez-nous.";
+    }).then(function () { bouton.disabled = false; });
+  });
+})();
