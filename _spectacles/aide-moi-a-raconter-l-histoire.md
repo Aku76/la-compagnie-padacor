@@ -6,7 +6,7 @@ duree: "4 × 15 min"
 jauge: "de 20 à 100 personnes"
 public: "Tout public, dès 4 ans"
 ordre: 2
-image: "/assets/images/spectacles/aide-moi-a-raconter-l-histoire.png"
+image: "/assets/images/spectacles/aide-moi-a-raconter-l-histoire.jpg"
 excerpt: "Un spectacle d’improvisation où les enfants ont leur mot à dire !"
 ---
 
