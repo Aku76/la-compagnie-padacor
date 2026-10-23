@@ -6,7 +6,7 @@ duree: "1h30"
 jauge: "de 80 à 3000 personnes"
 public: "Tout public, dès 6 ans"
 ordre: 3
-image: "/assets/images/spectacles/48h_a_la_cabane.png"
+image: "/assets/images/spectacles/48h_a_la_cabane.jpg"
 excerpt: "Les 48h dernières heures passées dans la cabane sont toujours les plus croustillantes"
 ---
 
