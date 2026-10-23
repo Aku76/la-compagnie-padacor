@@ -1,6 +1,6 @@
 ---
 titre: "Ces Petits Riens"
-format: "Spectacle d'improvisation poétique"
+format: "Pièce de théâtre improvisée"
 accroche: "Un spectacle d'improvisation qui raconte l'origine des grands moments de votre vie"
 duree: "1h15"
 jauge: "de 20 à 2000 personnes"
