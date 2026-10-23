@@ -20,9 +20,9 @@ C’est vous, le public, qui nous donnez le contexte dans laquelle l'histoire va
 - Pourquoi sont-ils dans ce lieu ? 
 - Depuis combien de temps sont-ils là ?
 
-**48h à la cabane** mêle improvisation théâtrale et décor sur scène. Une cabane, un feu de camp et vos propositions
-prennent alors vie au travers de personnages tendre, amusant, loufoque qu'incarnent fabuleusement 
-les comédien·nes sur scènes dans une ambiance mi-cocooning mi-drama
+**48h à la cabane** mêle improvisation théâtrale et décor sur scène. Une cabane rustique, un feu de camp 
+chaleureux et vos propositions prennent alors vie au travers de personnages tendre, amusant,
+loufoque qu'incarnent fabuleusement les comédien·nes sur scènes dans une ambiance mi-cocooning mi-drama
 
 ## Pour qui ?
 
