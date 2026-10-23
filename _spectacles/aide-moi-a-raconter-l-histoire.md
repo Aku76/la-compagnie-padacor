@@ -1,5 +1,5 @@
 ---
-titre: "[A venir] Aide moi à raconter l'histoire"
+titre: "Aide moi à raconter l'histoire [A venir]"
 format: "Spectacle d'improvisation pour enfants"
 accroche: "Un spectacle d’improvisation où les enfants ont leur mot à dire !"
 duree: "4 × 15 min"
