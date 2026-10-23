@@ -17,6 +17,7 @@ habitants de passages, ses histoires d'amour, ses secrets et ses chansons au coi
 Nous allons vivre les dernières 48h de ce groupe avant qu’il ne quitte la cabane.
 
 C’est vous, le public, qui nous donnez le contexte dans laquelle l'histoire va se dérouler :
+- Quels détails vont agrémenter les personnages de ce soir ?
 - Pourquoi sont-ils dans ce lieu ? 
 - Depuis combien de temps sont-ils là ?
 
