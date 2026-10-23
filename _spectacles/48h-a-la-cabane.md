@@ -1,6 +1,6 @@
 ---
 titre: "48h à la cabane [A venir]"
-format: "Pièce de théâtre improvisé"
+format: "Pièce de théâtre improvisée"
 accroche: "Les 48h dernières heures passées dans la cabane sont toujours les plus croustillantes"
 duree: "1h30"
 jauge: "de 80 à 3000 personnes"
