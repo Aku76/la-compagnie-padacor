@@ -26,6 +26,6 @@ loufoque qu'incarnent fabuleusement les comédien·nes sur scènes dans une ambi
 
 ## Pour qui ?
 
-Pour les familles, les amoureux·ses de la nature et de la déconnexion comme pour cell·eux qui en aurait besoin.
+Pour les familles, les amoureux·ses de la nature et de la déconnexion, comme pour cell·eux qui en aurait besoin.
 On est en vacance le temps d'une soirée. On s’émeut, on rit, on s'étonne des secrets qui se dévoilent et on repart en ayant
 vécu ensemble la fin d'une aventure tourmentée unique à cette soirée.
