@@ -1,5 +1,5 @@
 ---
-titre: "[A venir] 48h à la cabane"
+titre: "48h à la cabane [A venir]"
 format: "Pièce de théâtre improvisé"
 accroche: "Les 48h dernières heures passées dans la cabane sont toujours les plus croustillantes"
 duree: "1h30"
