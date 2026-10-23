@@ -3,7 +3,7 @@ titre: "Aide moi à raconter l'histoire [A venir]"
 format: "Spectacle pour enfants"
 accroche: "Un spectacle d’improvisation où les enfants ont leur mot à dire !"
 duree: "4 × 15 min"
-jauge: "de 20 à 100 personnes"
+jauge: "de 20 à 300 personnes"
 public: "Tout public, dès 4 ans"
 ordre: 2
 image: "/assets/images/spectacles/aide-moi-a-raconter-l-histoire.jpg"
