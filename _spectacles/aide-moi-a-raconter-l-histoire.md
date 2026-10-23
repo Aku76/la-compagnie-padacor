@@ -1,6 +1,6 @@
 ---
 titre: "Aide moi à raconter l'histoire [A venir]"
-format: "Spectacle d'improvisation pour enfants"
+format: "Spectacle pour enfants"
 accroche: "Un spectacle d’improvisation où les enfants ont leur mot à dire !"
 duree: "4 × 15 min"
 jauge: "de 50 à 400 personnes"
