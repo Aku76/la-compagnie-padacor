@@ -10,7 +10,8 @@
 {%- assign moisnum = e.date | date: "%-m" | plus: 0 -%}
 {%- assign annee = e.date | date: "%Y" -%}
 {%- assign heure = e.date | date: "%H:%M" -%}
-{%- assign id_popup = "evenement-detail-" | append: e.slug -%}
+{%- assign date_id = e.date | date: "%Y%m%d" -%}
+{%- assign id_popup = "evenement-detail-" | append: date_id | append: "-" | append: e.slug -%}
 <article class="carte evenement" data-popup-evenement-declencheur="{{ id_popup }}">
   <div class="evenement__date">
     <time datetime="{{ e.date | date_to_xmlschema }}">
